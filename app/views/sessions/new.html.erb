@@ -1,0 +1,15 @@
+<div class="row em-container">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+</div>
+<div class="row form-container">
+  <%= form_for(:session, url: vip_entrance_path) do |f| %>
+    <div class="ff-container">
+      <%= f.text_field :code, placeholder: "code", class: "login-form" %>
+    </div>
+    <div class="ff-container">
+      <%= f.submit "Send Code" %>
+    </div>
+  <% end %>
+</div>
