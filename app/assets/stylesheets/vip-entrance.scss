@@ -1,0 +1,59 @@
+div {
+  text-align: center;
+}
+
+#index-main-div {
+  top: -5%;
+  position: relative;
+}
+
+#index-title{
+  color: #d2aa08;
+  width: 41%;
+  margin-left: auto;
+  margin-right: auto;
+  h1 {
+    font-weight: 400;
+  }
+}
+
+#index-subtitle{
+  color:white;
+  margin: 1.5%;
+  h2{
+    font-weight: 400;
+  }
+}
+
+#index-text{
+  color:white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.index-middle-text{
+  color: #d2aa08;
+  font-size: 17px;
+}
+
+#index-gallery-icon {
+  margin-top: 2%;
+}
+
+#text-2 {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#yellow-ribbon{
+  background-color: #d2aa08;
+  height: 5px;
+  width: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
