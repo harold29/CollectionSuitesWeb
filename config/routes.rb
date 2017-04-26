@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/index', to: 'home#home'
   get '/home', to: 'home#index'
+  get '/thanks_register', to: 'home#thanks'
   get '/vip-entrance',     to: 'sessions#new'
   post '/vip-entrance',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

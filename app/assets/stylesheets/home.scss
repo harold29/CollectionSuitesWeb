@@ -70,6 +70,10 @@ body{
   cursor: pointer;
 }
 
+#left-wrapper-btns > button{
+  cursor: pointer;
+}
+
 @media (min-width: 768px){
 
   #wrapper-sec{
@@ -313,8 +317,8 @@ body{
   border: 10px solid #8c761b;
   background: url('CS-pattern.svg') black;
   background-size: 110px;
-  
-  height: 60%;
+
+  /* height: 60%; */
   width: 50%;
   min-width: 40%;
 }

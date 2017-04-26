@@ -1,0 +1,92 @@
+<style media="screen">
+  body{
+    background: url('assets/background-bottles.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* particular de esta pagina*/
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .btn-enter{
+    background: rgba(210,170,8,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 0%, rgba(210,170,8,1) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    border: none;
+  }
+
+
+  .line-body > p{
+    color: white;
+    text-align: left;
+  }
+
+  .line-body > h1,
+  .line-body > p > span{
+    color: rgba(210,170,8,1);
+    text-align: left;
+  }
+
+  .line-body > h1{
+    font-size: 3em;
+  }
+
+  .line-body > p{
+    font-size: 1.5em;
+  }
+
+
+  @media (min-width: 934px) {
+    .thanks-box{
+      margin-left: 50%;
+      margin-top: 5%;
+
+    }
+
+    .wrap-logo{
+      text-align: left;
+      position: relative;
+      right: 150px;
+    }
+
+    .line-body{
+      width: 50%;
+    }
+
+    .line-footer{
+      text-align: left;
+    }
+  }
+  @media (max-width: 933px) {
+    .thanks-box{
+      margin-right: 0px;
+    }
+
+    .line-body{
+
+    }
+  }
+
+</style>
+
+<div class="thanks-box">
+  <div class="line-logo">
+    <div class="wrap-logo">
+      <%= image_tag "cs-logo.png", :id => 'logo'%>
+      <%= image_tag "cs-logo-text.png", :id => 'logo-text'%>
+    </div>
+  </div>
+  <div class="line-body">
+    <h1>THANK YOU FOR REGISTERING</h1>
+    <p>ACCES CODE <span>XXXX</span></p>
+    <p>Simply enter the code to be granted access and ensure that you are among the first to know pf project updates as they become available.</p>
+  </div>
+  <div class="line-footer">
+    <button type="button" name="button" class="btn-enter">ENTER CODE</button>
+  </div>
+</div>
