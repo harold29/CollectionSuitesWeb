@@ -4,7 +4,11 @@ div {
 
 body {
   @media screen and (max-width: 767px){
-    background-position-x: 20% !important;
+  //   background-position-x: 20% !important;
+      background-size: contain !important;
+      background-position: 1% 100% !important;
+      background-repeat: no-repeat !important;
+      background-color: black !important;
   }
 }
 
@@ -15,7 +19,7 @@ body {
     top: 0%;
   }
   @media screen and (max-width: 767px){
-    top: 5%;
+    top: -2%;
   }
 }
 
@@ -25,12 +29,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   @media screen and (max-width: 767px){
-    width: 90% !important;
+    width: 87% !important;
   }
   h1 {
     font-weight: 400;
     @media screen and (max-width: 767px){
-      font-size: 20px !important;
+      font-size: 16px !important;
     }
   }
 }
@@ -38,8 +42,16 @@ body {
 #index-subtitle{
   color:white;
   margin: 1.5%;
+  @media screen and (max-width: 767px){
+    margin-top: 5% !important;
+    margin-right: 5% !important;
+  }
   h2{
     font-weight: 400;
+    @media screen and (max-width: 767px){
+      font-size: 12px !important;
+      color: white;
+    }
   }
 }
 
@@ -62,6 +74,19 @@ body {
 
 #index-gallery-icon {
   margin-top: 2%;
+  @media screen and (max-width: 767px){
+    margin-top: 5% !important;
+    margin-top: 5% !important;
+  }
+}
+
+#text-1{
+  p{
+    @media screen and (max-width: 767px){
+      margin-top: 1.5% !important;
+      margin-bottom: 15% !important;
+    }
+  }
 }
 
 #text-2 {
@@ -70,6 +95,11 @@ body {
   margin-right: auto;
   margin-top: 2%;
   margin-bottom: 2%;
+  @media screen and (max-width: 767px){
+    width: 85% !important;
+    font-size: 11px !important;
+    margin-top: 5% !important;
+  }
 }
 
 #yellow-ribbon{
@@ -78,4 +108,18 @@ body {
   width: 1.5%;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 767px){
+    width: 5% !important;
+    font-size: 14px;
+    margin-top: 5%;
+    height: 3px !important;
+  }
+}
+
+#text-3{
+  p{
+    @media screen and (max-width: 767px){
+      margin-top: 1.5%;
+    }
+  }
 }
