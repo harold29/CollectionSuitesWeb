@@ -1,0 +1,188 @@
+<style media="screen">
+  body{
+    background: url('assets/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+  }
+
+  .collection-suites-box{
+    border: 10px solid #8c761b;
+    background: url('assets/cs-pattern.svg') black;
+    background-size: 110px;
+    box-shadow: 0px 0px 38px 25px rgba(25, 22, 22, 0.88);
+    /* height: 60%; */
+    width: 50%;
+    min-width: 40%;
+  }
+
+  .line-top{
+    position: relative;
+    top: 0px;
+    text-align: right;
+  }
+
+  .line-logo{
+    height: 100%;
+    width: 100%;
+    text-align: left;
+  }
+
+  .close{
+    position: relative;
+    right: 15px;
+    top: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    cursor: pointer;
+  }
+
+  .wrap-logo{
+    text-align: left;
+  }
+
+  .wrap-logo > #logo{
+    margin-left: 30px;
+    max-height: 120px;
+  }
+
+  .wrap-logo > #logo-text{
+    position: relative;
+    bottom: 28px;
+  }
+
+  @media (min-width: 934px) {
+    body{
+      background: url(assets/background2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .line-body > p{
+      text-align: left;
+      margin-left: 20%;
+    }
+
+    .line-body > p:first-child{
+      color: #8c761b;
+      font-size: 2.3em;
+      text-align: left;
+      width: 20rem;
+    }
+
+    .line-body > p:last-child{
+      color: #FFF;
+      font-size: 1em;
+      text-align: left;
+      width: 20rem;
+      letter-spacing: 0.1rem;
+      word-spacing: 0.1rem;
+    }
+
+    .line-body{
+      margin-top: 5%;
+      margin-bottom: 20%;
+    }
+
+  }
+
+  @media (max-width: 933px) {
+    body{
+      background: url(assets/background2.jpg);
+      background-size: contain;
+      background-position: 1% 100%;
+      background-repeat: no-repeat;
+      background-color: black;
+      font-size: calc(1.5vw);
+    }
+
+    .wrap-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrap-logo > #logo {
+      margin-left: 10%;
+      max-width: 100px;
+      width: 20%;
+    }
+
+    .wrap-logo > #logo-text {
+      width: 60%;
+      max-width: 243px;
+      position: unset;
+      bottom: unset;
+    }
+
+
+    .line-body > p{
+      text-align: left;
+      margin-left: 20%;
+    }
+
+    .line-body > p:first-child{
+      color: #8c761b;
+      font-size: 2.3em;
+      text-align: left;
+      width: 20rem;
+      max-width: 70%;
+    }
+
+    .line-body > p:last-child{
+      color: #FFF;
+      font-size: 1em;
+      text-align: left;
+      width: 20rem;
+      max-width: 70%;
+      letter-spacing: 0.1rem;
+      word-spacing: 0.1rem;
+    }
+
+    @media (max-width: 767px) {
+
+      body{
+        justify-content: flex-start;
+      }
+
+      .collection-suites-box {
+        margin-top: 10%;
+        width: 90% !important;
+      }
+
+      .line-body > p{
+        margin-bottom: 20%;
+      }
+
+      .line-body > p:first-child{
+        font-size: 3.7em;
+      }
+
+      .line-body > p:last-child{
+        width: unset;
+        font-size: 2em;
+      }
+
+    }
+  }
+
+</style>
+
+<div class="collection-suites-box">
+  <div class="line-top">
+    <span class="close">X</span>
+  </div>
+  <div class="line-logo">
+    <div class="wrap-logo">
+      <%= image_tag "cs-logo.png", :id => 'logo'%>
+      <%= image_tag "cs-logo-text.png", :id => 'logo-text'%>
+    </div>
+  </div>
+  <div class="line-body">
+    <p>THANK YOU FOR YOUR INTEREST IN COLLECTION SUITES</p>
+    <p>We have received your information</p>
+
+  </div>
+</div>

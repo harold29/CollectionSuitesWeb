@@ -8,4 +8,6 @@ class HomeController < ApplicationController
   def thanks
   end
 
+  def thanksinst
+  end
 end
