@@ -55,11 +55,20 @@
     bottom: 28px;
   }
 
-  .form-register > div > input{
-    margin-bottom: 10px;
+  .form-register{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-register input{
     border: 1px solid white;
-    background-color: #191718;
-    padding: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.59);
+    padding: 5px 10px;
+    color: white;
+  }
+
+  .form-register input {
+    margin-bottom: 5px;
   }
 
   .line-body > p {
@@ -80,6 +89,9 @@
     flex-direction: column;
     align-items: flex-end;
   }
+  .line-footer > * {
+    cursor: pointer;
+  }
 
   .line-footer > img {
     height: 7px;
@@ -96,6 +108,7 @@
     text-transform: uppercase;
   }
 
+
   @media (min-width: 934px) {
     body{
       background: url(assets/background2.jpg);
@@ -108,27 +121,36 @@
       margin-top: 20%;
     }
 
-    .form-register{
+    .form-register > div {
       display: flex;
-      justify-content: space-around;
+      width: 100%;
     }
 
-    .form-register > div {
+    .form-register textarea{
+      margin: 0px 30px 10px 30px;
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.59);
+      padding: 0px 10px;
+      color: white;
+      width: 100%;
+    }
+
+    .form-register > div:last-child > div {
       display: flex;
       flex-direction: column;
       width: 50%;
     }
 
     .form-register > div:first-child {
-      display: flex;
-      flex-direction: column;
+      width: 100%;
+    }
+
+    .form-register > div:last-child > div:first-child {
       margin-left: 30px;
       margin-right: 5px;
     }
 
-    .form-register > div:last-child {
-      display: flex;
-      flex-direction: column;
+    .form-register > div:last-child > div:last-child {
       margin-left: 5px;
       margin-right: 30px;
     }
@@ -165,6 +187,16 @@
       bottom: unset;
     }
 
+    .form-register textarea{
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.59);
+      padding: 0px 10px;
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+
     .line-body > p{
       text-align: left;
       margin: 20% 10% 10% 10%;
@@ -174,6 +206,11 @@
       display: flex;
       flex-direction: column;
       margin: 0px 10%;
+    }
+
+    .form-register input{
+      box-sizing: border-box;
+      width: 100%;
     }
 
     .line-footer{
@@ -186,7 +223,7 @@
       }
 
       .collection-suites-box {
-        margin-top: 10%;
+        margin-top: 3%;
         width: 90% !important;
       }
     }
@@ -207,13 +244,18 @@
     <p>Become a <span>VIP Member of Collection Suites</span> by filling out the form below to receive your exclusive activate code</p>
     <form class="form-register" action="" method="post">
       <div>
-        <input type="text" name="" value="" placeholder="FIRST NAME">
-        <input type="text" name="" value="" placeholder="LAST NAME">
-        <input type="text" name="" value="" placeholder="PHONE">
+        <textarea rows="8" cols="80" placeholder="TYPE YOUR REQUEST"></textarea>
       </div>
       <div>
-        <input type="text" name="" value="" placeholder="ZIP CODE">
-        <input type="text" name="" value="" placeholder="EMAIL">
+        <div>
+          <input type="text" name="" value="" placeholder="FIRST NAME">
+          <input type="text" name="" value="" placeholder="LAST NAME">
+          <input type="text" name="" value="" placeholder="PHONE">
+        </div>
+        <div>
+          <input type="text" name="" value="" placeholder="ZIP CODE">
+          <input type="text" name="" value="" placeholder="EMAIL">
+        </div>
       </div>
     </form>
   </div>

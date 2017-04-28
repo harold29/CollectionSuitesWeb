@@ -28,6 +28,9 @@ class HomeController < ApplicationController
   def registerform
   end
 
+  def updatesform
+  end
+
   def thanksmem
   end
 

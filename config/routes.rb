@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/home_guest', to: 'home#home_guest'
   get '/thanks_register', to: 'home#thanks'
   get '/register_form', to: 'home#registerform'
+  get '/updates_form', to: 'home#updatesform'
   get '/thanks_register_member', to: 'home#thankregssmem'
   get '/thanks_interest', to: 'home#thanksinst'
   get '/vip-entrance',     to: 'sessions#new'
