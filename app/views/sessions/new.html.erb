@@ -12,7 +12,7 @@
     </div>
     <div class="wrap-buttons">
       <div id="left-wrapper-btns">
-        <button type="button" name="button">GUEST ACCESS</button>
+        <button onclick="location.href = 'home_guest';" type="button" name="button">GUEST ACCESS</button>
       </div>
       <div id="right-wrapper-btns">
         <%= form_for(:session, url: vip_entrance_path) do |f| %>

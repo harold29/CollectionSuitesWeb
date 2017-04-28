@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/index', to: 'home#home'
   get '/home', to: 'home#index'
+  get '/home_guest', to: 'home#home_guest'
   get '/thanks_register', to: 'home#thanks'
   get '/thanks_interest', to: 'home#thanksinst'
   get '/vip-entrance',     to: 'sessions#new'
