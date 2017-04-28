@@ -10,4 +10,14 @@ class HomeController < ApplicationController
 
   def thanksinst
   end
+
+  def thankregssmem
+  end
+
+  def registerform
+  end
+
+  def thanksmem
+  end
+
 end

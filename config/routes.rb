@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/index', to: 'home#home'
   get '/home', to: 'home#index'
   get '/thanks_register', to: 'home#thanks'
+  get '/register_form', to: 'home#registerform'
+  get '/thanks_register_member', to: 'home#thankregssmem'
   get '/thanks_interest', to: 'home#thanksinst'
   get '/vip-entrance',     to: 'sessions#new'
   post '/vip-entrance',    to: 'sessions#create'
