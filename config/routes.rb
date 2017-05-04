@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/thanks_register', to: 'home#thanks'
   get '/register_form', to: 'home#registerform'
   get '/updates_form', to: 'home#updatesform'
-  get '/thanks_register_member', to: 'home#thankregssmem'
+  get '/thanks_register_member', to: 'home#thanksmem'
   get '/thanks_interest', to: 'home#thanksinst'
   get '/vip-entrance',     to: 'sessions#new'
   post '/vip-entrance',    to: 'sessions#create'

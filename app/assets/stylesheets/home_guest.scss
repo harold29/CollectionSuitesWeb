@@ -25,7 +25,13 @@
 }
 
 #hg-text-3{
-  p{
+  p a{
+    color: #AF8400;
+    font-size: 17px;
     margin-top: 10px;
+    text-decoration: none;
+    &:hover{
+      font-weight: bold;
+    }
   }
 }
