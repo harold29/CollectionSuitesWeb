@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/updates_form', to: 'home#updatesform'
   get '/thanks_register_member', to: 'home#thanksmem'
   get '/thanks_interest', to: 'home#thanksinst'
+  get '/become', to: 'home#become'
   get '/vip-entrance',     to: 'sessions#new'
   post '/vip-entrance',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
