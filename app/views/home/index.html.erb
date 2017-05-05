@@ -7,7 +7,92 @@
     background-repeat: no-repeat;
     align-items: center;
   }
+
+
+    .wrapper-slide{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      transform: translateX(-100%);
+      will-change: transform;
+      transition: transform 300ms linear;
+    }
+
+    .wrapper-slide.up{
+      transform: translateX(0%);
+    }
+
+    .slide{
+      background-color: #000;
+      height: 100%;
+      width: 25%;
+      left: 0;
+    }
+
+    .image-space{
+      width: 75%;
+      height: 100%;
+      background-color: transparent;
+    }
+
+    #current-img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .hide{
+      display: none;
+    }
+
+    .galery{
+      height: auto;
+      width: 50%;
+      max-width: 300px;
+      cursor: pointer;
+    }
+
+    video{
+      height: 100vh;
+      width: 100vw;
+      background-color: #000;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 150;
+      top: 0;
+      left: 0;
+    }
+
+    .video > #close-video-tag{
+      position: absolute;
+      top: 30px;
+      right: 60px;
+      cursor: pointer;
+      color: #fff;
+      z-index: 151;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      padding: 15px;
+      font-family: sans-serif;
+    }
+
+    @media (max-width:767px) {
+      .list-slide{
+        padding: 0px;
+      }
+      .galery{
+        width: 80%;
+      }
+    }
 </style>
+
+<div class="video">
+  <span id="close-video-tag">X</span>
+  <video id="tag-video" src="http://thesocialus.com/video.mp4" autoplay controls poster="/assets/image2.png" width="100%" height='100%'></video>
+</div>
+
 <div id="index-main-div-atp">
   <div id="index-title">
     <h1>DISCOVER THE ONLY PRIVATE PLACE WORTHY OF YOUR MOST VALUED COLLECTION</h1>
@@ -36,7 +121,57 @@
     <p>REGISTER</p>
   </div>
 </div>
+<div class="wrapper-slide">
+  <div class="slide">
+    <div style="text-align:right; color:white;position:relative;top:40px;right:40px;"><span id="close" style="font-family: sans-serif;cursor:pointer;">X</span></div>
+    <ul class="list-slide" style="height: 80%; display:flex; flex-direction: column; justify-content: space-around; align-items:center;">
+      <li>
+        <%= image_tag "image1.png", :class =>'galery'%>
+      </li>
+      <li>
+        <%= image_tag "image2.png", :class =>'galery'%>
+      </li>
+      <li>
+        <%= image_tag "image3.png", :class =>'galery'%>
+      </li>
+      <li>
+        <%= image_tag "image4.png", :class =>'galery'%>
+      </li>
+      <li>
+        <%= image_tag "image5.png", :class =>'galery'%>
+      </li>
+    </ul>
+  </div>
+  <div class="image-space">
+    <img src="" id="current-img" class="hide">
+  </div>how to add
+</div>
+<script type="text/javascript">
+ (function() {
+  document.getElementById('gallery-icon-img').addEventListener('click', function(){
+    document.getElementsByClassName('wrapper-slide')[0].classList.add('up');
+  });
 
+  document.getElementById('close').addEventListener('click', function(){
+    document.getElementsByClassName('wrapper-slide')[0].classList.remove('up');
+    document.getElementById('current-img').classList.add('hide');
+  });
+
+  document.getElementById('close-video-tag').addEventListener('click', function(){
+    document.getElementById("tag-video").pause();
+    document.getElementsByClassName('video')[0].classList.add('hide');
+    var child = document.getElementsByClassName("video")[0];
+    child.parentNode.removeChild(child);
+  });
+
+  for (var i = 0; i < 5; i++) {
+    document.getElementsByClassName('galery')[i].addEventListener('click', function(){
+      document.getElementById('current-img').classList.remove('hide');
+      document.getElementById('current-img').src = this.src;
+    });
+  }
+ })();
+</script>
 
 <!-- <style media="screen">
   body{
@@ -46,4 +181,3 @@
     background-repeat: no-repeat;
   }
 </style> -->
-
