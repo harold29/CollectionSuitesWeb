@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508191331) do
+ActiveRecord::Schema.define(version: 20170508194535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(version: 20170508191331) do
     t.string   "p1"
     t.string   "p2"
     t.string   "p3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "code"
     t.string   "zip"
+    t.text     "requirement"
   end
 
   add_foreign_key "logs", "users"

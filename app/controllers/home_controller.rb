@@ -30,15 +30,14 @@ class HomeController < ApplicationController
   end
 
   def updatesform
-    @user = User.create(user_params)
-    
+    @user = current_user
   end
 
   def thanksmem
   end
 
   def createuser
-    abort
+    user = User.create(user_params)
     respond_to do |format|
       if user.persisted?
         format.html { redirect_to(thanks_interest_url) }
@@ -50,11 +49,25 @@ class HomeController < ApplicationController
   end
 
   def updateuser
+    @user = current_user
+    @user.update(user_params)
+    respond_to do |format|
+      if @user.persisted?
+        format.html { redirect_to(thanks_register_member_url) }
+      else
+        # TODO: hace falta agregar si hay un error en la pagina. Es mejor dejar las verificaciones
+        # en el frontend para evitar mas trabajo en el back.
+      end
+    end
   end
 
   private
 
   def user_params
     params.require(:user).permit(:name, :last_name, :p1, :zip, :email)
+  end
+
+  def update_user_params
+    params.require(:user).permit(:requirement, :name, :last_name, :p1, :zip, :email)
   end
 end

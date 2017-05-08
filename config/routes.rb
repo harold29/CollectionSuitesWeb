@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get '/error', to: 'status#error'
 
   post '/createuser', to: 'home#createuser'
+  patch '/updateuser', to: 'home#updateuser'
 end
