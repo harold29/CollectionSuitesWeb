@@ -34,4 +34,9 @@ class HomeController < ApplicationController
   def thanksmem
   end
 
+  def createuser
+    abort
+    user = User.new(params[:user])
+  end
+
 end
