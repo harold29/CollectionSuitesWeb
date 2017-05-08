@@ -1,0 +1,224 @@
+<style media="screen">
+  body{
+    background: url('assets/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .collection-suites-box{
+    border: 10px solid rgb(175,132,0);
+    background: url('assets/cs-pattern.svg') black;
+    background-size: 110px;
+    box-shadow: 0px 0px 38px 25px rgba(25, 22, 22, 0.88);
+    /* height: 60%; */
+    width: 50%;
+    min-width: 40%;
+  }
+
+  .line-top{
+    position: relative;
+    top: 0px;
+    text-align: right;
+  }
+
+  .line-logo{
+    /* height: 100%; */
+    width: 100%;
+    text-align: left;
+  }
+
+  .close{
+    position: relative;
+    right: 15px;
+    top: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    cursor: pointer;
+  }
+
+  .wrap-logo{
+    text-align: left;
+  }
+
+  .wrap-logo > #logo{
+    margin-left: 30px;
+    max-height: 110px;
+  }
+
+  .wrap-logo > #logo-text{
+    position: relative;
+    bottom: 28px;
+  }
+
+  .form-register > div > input{
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: #191718;
+    padding: 0px 10px;
+  }
+
+  .line-body > p {
+    text-align: left;
+    margin: 0px 30px 10px 30px;
+    color: rgb(255,255,255);
+  }
+
+  .line-body > p > span{
+    color: rgb(175,132,0);
+  }
+
+  .line-footer{
+    text-align: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .line-footer > img {
+    height: 7px;
+    margin-bottom: 15px;
+  }
+
+  .line-footer > input {
+    background: none;
+    color: rgb(175,132,0);
+    border: none;
+    padding-right: 0px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 934px) {
+    body{
+      background: url(assets/background2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .line-body{
+      margin-bottom: 5%;
+      margin-top: 20%;
+    }
+
+    .form-register{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .form-register > div {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    .form-register > div:first-child {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      margin-right: 5px;
+    }
+
+    .form-register > div:last-child {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+      margin-right: 30px;
+    }
+
+    .line-footer{
+      margin-right: 30px;
+    }
+  }
+
+  @media (max-width: 933px) {
+    body{
+      background: url(assets/background2.jpg);
+      background-size: contain;
+      background-position: 1% 100%;
+      background-repeat: no-repeat;
+      background-color: black;
+    }
+
+    .wrap-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrap-logo > #logo {
+      margin-left: 10%;
+      max-width: 100px;
+      width: 20%;
+    }
+
+    .wrap-logo > #logo-text {
+      width: 60%;
+      max-width: 243px;
+      position: unset;
+      bottom: unset;
+    }
+
+    .line-body > p{
+      text-align: left;
+      margin: 20% 10% 10% 10%;
+    }
+
+    .form-register > div{
+      display: flex;
+      flex-direction: column;
+      margin: 0px 10%;
+    }
+
+    .line-footer{
+      margin-right: 10%;
+    }
+
+    @media (max-width: 767px) {
+      body{
+        justify-content: flex-start;
+      }
+
+      .collection-suites-box {
+        margin-top: 10%;
+        width: 90% !important;
+      }
+    }
+  }
+</style>
+
+<div class="collection-suites-box">
+  <div class="line-top">
+    <span class="close">X</span>
+  </div>
+  <div class="line-logo">
+    <div class="wrap-logo">
+      <%= image_tag "cs-logo.png", :id => 'logo'%>
+      <%= image_tag "cs-logo-text.png", :id => 'logo-text'%>
+    </div>
+  </div>
+  <div class="line-body">
+    <p>Become a <span>VIP Member of Collection Suites</span> by filling out the form below to receive your exclusive activate code</p>
+    <form class="form-register" action="" method="post">
+      <div>
+        <input type="text" name="" value="" placeholder="FIRST NAME">
+        <input type="text" name="" value="" placeholder="LAST NAME">
+        <input type="text" name="" value="" placeholder="PHONE">
+      </div>
+      <div>
+        <input type="text" name="" value="" placeholder="ZIP CODE">
+        <input type="text" name="" value="" placeholder="EMAIL">
+      </div>
+    </form>
+  </div>
+  <div class="line-footer">
+    <%= image_tag "rectangulo.png" %>
+    <input type="submit" value="Submit">
+  </div>
+</div>
