@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   post '/vip-entrance',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   get '/error', to: 'status#error'
+
+  post '/createuser', to: 'home#createuser'
 end
