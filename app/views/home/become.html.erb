@@ -1,74 +1,64 @@
+<%= stylesheet_link_tag "become" %>
+
 <style media="screen">
   body{
-    background: url('assets/background2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* height: unset; */
+    display: unset;
+    /* background: url('assets/background2.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* align-items: center; */
   }
-
-  /* partial  */
-
-  body{
-    align-items: center;
-  }
-
-
-  .collection-suites-box{
-    border: 10px solid rgb(175,132,0);
-    background: url('cs-pattern.svg') black;
-    background-size: 110px;
-
-    /* height: 60%; */
-    width: 50%;
-    min-width: 40%;
-  }
-
-  .line-top{
-    position: relative;
-    top: 0px;
-    text-align: right;
-  }
-
-  .line-logo{
-    height: 100%;
-    width: 100%;
-  }
-
-  .close{
-    position: relative;
-    right: 15px;
-    top: 15px;
-
-    color: white;
-    font-size: 20px;
-    font-family: Arial;
-    cursor: pointer;
-  }
-
-  .wrap-logo{
-    /*solo referencia */
-  }
-
-  .wrap-logo > #logo{
-    margin-left: 30px;
-    max-height: 120px;
-  }
-
-  .wrap-logo > #logo-text{
-    position: relative;
-    bottom: 28px;
-  }
-
 </style>
 
-<div class="collection-suites-box">
-  <div class="line-top">
-    <span class="close">X</span>
+
+
+<div id="bc-wrapper-1">
+  <div id="wrapper-sec">
+    <div id="left-border-gradient"></div>
+    <div class="bc-float-logo"><%= image_tag "cs-logo-text.png", :id => 'cs-logo-text'%></div>
+    <div class="main-sec">
+      <div class="wrap-images">
+        <%= image_tag "flare.png", :id => 'flare'%>
+        <%= image_tag "cs-logo.png", :id => 'logo', :width => '904', :height => '442' %>
+      </div>
+      <div class="wrap-text">
+        <p>Excitement is on the rise for only the most passionate collectors</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </div>
+    </div>
+    <div id="bc-arrow"><%= image_tag "arrow.png"%></div>
+    <div id="right-border-gradient"></div>
   </div>
-  <div class="line-logo">
-    <div class="wrap-logo">
-      <%= image_tag "cs-logo.png", :id => 'logo'%>
-      <%= image_tag "cs-logo-text.png", :id => 'logo-text'%>
+</div>
+<div id="bc-wrapper-2">
+  <div id="index-main-div-atp">
+    <div id="index-title">
+      <h1>DISCOVER THE ONLY PRIVATE PLACE WORTHY OF YOUR MOST VALUED COLLECTION</h1>
+    </div>
+    <div id="index-subtitle">
+      <h2>WELCOME TO COLLECTION SUITES</h2>
+    </div>
+    <div id="index-text">
+      <p>Rising from the heart of Miami, Collection Suites will be 38 suites of
+      unprecedented luxury space. Arriving this summer, it will be an exclusive
+      private place for the most exquisite collections. Outfitted to reflect
+      your unique tastes, each suite offers a living space expressly designed
+      for you -as an individual, as a lover of luxury, as a collector.</p>
+    </div>
+    <div id="index-gallery-icon">
+      <%= image_tag "gallery-icon.png", :id => 'gallery-icon-img'%>
+    </div>
+    <div class="index-middle-text" id="text-1">
+      <p>GALLERY</p>
+    </div>
+    <div class="index-middle-text" id="text-2">
+      <p>BE AMONGST THE FIRST TO KNOW OF PROJECT UPDATES AS THEY BECOME AVAILABLE</p>
+    </div>
+    <div id="yellow-ribbon"></div>
+    <div class="index-middle-text" id="text-3">
+      <p><a href="/updates_form">REGISTER</a></p>
     </div>
   </div>
 </div>
