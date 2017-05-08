@@ -63,3 +63,47 @@
 // .main-sec{
 //   height: 100%;
 // }
+
+
+
+#bc-wrapper-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0px;
+
+  background: url('background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .text-paragraph{
+    .title-paragraph, .content-paragraph{
+      text-align: center;
+      padding: 0px 30%;
+    }
+    .title-paragraph{
+      color: rgb(175,132,0);
+    }
+
+    .content-paragraph{
+      color: rgb(255,255,255);
+      letter-spacing: 0.5px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #bc-wrapper-2{
+    background-size: contain;
+    background-position: 0% 100%;
+    padding: 0% 10%;
+  }
+  .text-paragraph{
+    .content-paragraph{
+      margin-bottom: 30px;
+    }
+  }
+}

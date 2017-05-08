@@ -242,7 +242,29 @@
   </div>
   <div class="line-body">
     <p>Become a <span>VIP Member of Collection Suites</span> by filling out the form below to receive your exclusive activate code</p>
-    <form class="form-register" action="" method="post">
+    <%  %>
+    <%= form_for @user, url: { action: "updateuser" }, html: { class: "form-register" } do |user| %>
+      <div>
+        <%= user.text_area :requirement, placeholder: "TYPE YOUR REQUEST" %>
+      </div>
+      <div>
+        <div>
+          <%= user.text_field :name, placeholder: "FIRST NAME" %>
+          <%= user.text_field :last_name, placeholder: "LAST NAME" %>
+          <%= user.telephone_field :p1, placeholder: "PHONE" %>
+        </div>
+        <div>
+          <%= user.text_field :zip, placeholder: "ZIP CODE" %>
+          <%= user.email_field :email, placeholder: "EMAIL" %>
+        </div>
+      </div>
+      <div class="line-footer">
+        <%= image_tag "rectangulo.png" %>
+        <%= user.submit "submit"%>
+        <!-- <input type="submit" value="Submit"> -->
+      </div>
+    <% end %>
+    <!-- <form class="form-register" action="" method="post">
       <div>
         <textarea rows="8" cols="80" placeholder="TYPE YOUR REQUEST"></textarea>
       </div>
@@ -257,10 +279,10 @@
           <input type="text" name="" value="" placeholder="EMAIL">
         </div>
       </div>
-    </form>
+    </form> -->
   </div>
-  <div class="line-footer">
+  <!-- <div class="line-footer">
     <%= image_tag "rectangulo.png" %>
     <input type="submit" value="Submit">
-  </div>
+  </div> -->
 </div>
