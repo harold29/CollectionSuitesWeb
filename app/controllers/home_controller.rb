@@ -50,7 +50,7 @@ class HomeController < ApplicationController
 
   def updateuser
     @user = current_user
-    @user.update(user_params)
+    @user.update(update_user_params)
     respond_to do |format|
       if @user.persisted?
         format.html { redirect_to(thanks_register_member_url) }
