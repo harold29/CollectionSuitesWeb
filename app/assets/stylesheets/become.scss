@@ -60,12 +60,6 @@
   height: 60%;
 }
 
-// .main-sec{
-//   height: 100%;
-// }
-
-
-
 #bc-wrapper-2{
   display: flex;
   flex-direction: column;
@@ -77,21 +71,62 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
 
-  .text-paragraph{
-    .title-paragraph, .content-paragraph{
-      text-align: center;
-      padding: 0px 30%;
-    }
-    .title-paragraph{
-      color: rgb(175,132,0);
-    }
+.text-paragraph{
+  .title-paragraph, .content-paragraph{
+    text-align: center;
+    padding: 0px 30%;
+  }
+  .title-paragraph{
+    color: rgb(175,132,0);
+  }
 
-    .content-paragraph{
-      color: rgb(255,255,255);
-      letter-spacing: 0.5px;
-      margin-bottom: 100px;
+  .content-paragraph{
+    color: rgb(255,255,255);
+    letter-spacing: 0.5px;
+    margin-bottom: 100px;
+  }
+
+  .no-margin{
+    margin-bottom: 0px;
+  }
+
+}
+
+#bc-wrapper-3{
+  #bottles-section{
+    height: 80vh;
+    background: url('background-bottles.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+    .wrapper-footer{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 2.5%;
+      padding-bottom: 5%;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper > * {
+    display: block;
+    text-align: right;
   }
 }
 
@@ -104,6 +139,26 @@
   .text-paragraph{
     .content-paragraph{
       margin-bottom: 30px;
+    }
+  }
+  #bc-wrapper-3{
+    #bottles-section{
+      height: unset;
+      background: url('background-bottles.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrapper-footer{
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
     }
   }
 }
