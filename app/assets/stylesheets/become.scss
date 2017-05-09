@@ -26,7 +26,7 @@
       width:100% !important;
     }
     @media screen and (max-width: 767px){
-      width:60% !important;
+      width:80% !important;
       height: 70% !important;
     }
   }
@@ -94,6 +94,12 @@
 
 }
 
+.content-paragraph{
+  @media screen and (max-width: 767px){
+    padding: 0% 5% !important;
+  }
+}
+
 #bc-wrapper-3{
   #bottles-section{
     height: 80vh;
@@ -111,7 +117,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkgrey;
+    background-color: #232426;
     .wrapper-footer{
       width: 50%;
       display: flex;
@@ -120,6 +126,15 @@
       padding-top: 2.5%;
       padding-bottom: 5%;
     }
+  }
+}
+
+.wrapper{
+  h2 {
+    color: rgb(175,132,0);
+  }
+  p{
+    color: white;
   }
 }
 
