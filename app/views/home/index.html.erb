@@ -85,6 +85,23 @@
       .galery{
         width: 80%;
       }
+
+      #current-img {
+        height: auto;
+      }
+
+      .image-space {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        padding-left: 2%;
+      }
+
+      .wrapper-slide.up {
+        background: black;
+      }
     }
 </style>
 
@@ -123,7 +140,7 @@
 </div>
 <div class="wrapper-slide">
   <div class="slide">
-    <div style="text-align:right; color:white;position:relative;top:40px;right:40px;"><span id="close" style="font-family: sans-serif;cursor:pointer;">X</span></div>
+    <div style="text-align:right; color:white;position:relative;top:20px;right:40px;"><span id="close" style="font-family: sans-serif;cursor:pointer;">X</span></div>
     <ul class="list-slide" style="height: 80%; display:flex; flex-direction: column; justify-content: space-around; align-items:center;">
       <li>
         <%= image_tag "image1.png", :class =>'galery'%>
@@ -144,7 +161,7 @@
   </div>
   <div class="image-space">
     <img src="" id="current-img" class="hide">
-  </div>how to add
+  </div>
 </div>
 <script type="text/javascript">
  (function() {

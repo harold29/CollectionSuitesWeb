@@ -143,7 +143,7 @@ body{
 
   .wrap-text > p:first-child{
     width: 60%;
-    margin-top: 0px;
+    margin-top: 50px;
     font-size: 2em;
     color: rgb(175,132,0);
     text-align: center;
@@ -160,6 +160,7 @@ body{
     width: 40%;
     display: flex;
     justify-content: center;
+
   }
 
   .wrap-buttons > #left-wrapper-btns{
@@ -257,9 +258,10 @@ body{
   .wrap-text > p:first-child{
     width: 85%;
     margin: 0px;
-    font-size: 1.8em;
+    font-size: 1.2em;
     color: rgb(175,132,0);
     text-align: center;
+    margin-top: 35%;
   }
 
   .wrap-text > img{
@@ -273,7 +275,7 @@ body{
     position: relative;
 
     width: 100%;
-    top: 40px;
+    top: 10px;
 
     display: flex;
     flex-direction: column;
