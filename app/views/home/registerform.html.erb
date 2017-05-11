@@ -4,6 +4,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-align-items: center;
     align-items: center;
     font-size: 16px;
   }
@@ -76,9 +77,15 @@
     text-align: right;
     margin-top: 5%;
     margin-bottom: 5%;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: flex-end;
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
   }
 
   .line-footer > img {
@@ -109,12 +116,18 @@
     }
 
     .form-register{
+      display: -webkit-flex;
+      -webkit-justify-content: space-around;
+
       display: flex;
       justify-content: space-around;
       padding-top: 5%;
     }
 
     .form-register > div > div {
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
       display: flex;
       flex-direction: column;
       /* width: 50%; */
@@ -122,6 +135,9 @@
     }
 
     .form-register > div > div:first-child {
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
       display: flex;
       flex-direction: column;
       /* margin-left: 30px; */
@@ -129,6 +145,9 @@
     }
 
     .form-register > div > div:last-child {
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
       display: flex;
       flex-direction: column;
       /* margin-left: 5px; */
@@ -150,6 +169,9 @@
     }
 
     .wrap-logo {
+      display: -webkit-flex;
+      -webkit-align-items: center;
+
       display: flex;
       align-items: center;
     }
@@ -173,6 +195,9 @@
     }
 
     .form-register > div > div{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
       display: flex;
       flex-direction: column;
       margin: 0px 10%;
@@ -184,7 +209,7 @@
 
     @media (max-width: 767px) {
       body{
-        justify-content: flex-start;
+        -webkit-justify-content: flex-start;
       }
 
       .collection-suites-box {

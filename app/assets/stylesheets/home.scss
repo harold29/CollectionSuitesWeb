@@ -8,6 +8,10 @@ html{
 body{
   background: #000;
   height: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +27,7 @@ body{
   background: url('cs-pattern.svg');
   background-size: 110px;
 
-  display: flex;
+  display: -webkit-flex;
 }
 
 .wrap-text > p:nth-child(2){
@@ -83,38 +87,47 @@ body{
 @media (min-width: 768px){
 
   #wrapper-sec{
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
   }
   #left-border-gradient{
     width: 15%;
     height: 100%;
-    background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(255,0,0,0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(255,0,0,0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(255,0,0,0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, rgba(0,0,0,1), rgba(255,0,0,0)); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); /* Standard syntax (must be last) */
   }
   #right-border-gradient{
     width: 15%;
     height: 100%;
-    background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1)); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)); /* Standard syntax (must be last) */
   }
 
   .main-sec{
     width: 60%;
 
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
   }
 
   /* Logo */
   .wrap-images{
     position: relative;
     height: 33%;
+
+    display: -webkit-flex;
+    -webkit-justify-content: center;
 
     display: flex;
     justify-content: center;
@@ -127,7 +140,8 @@ body{
   }
 
   #logo{
-    max-height: 100%;
+    max-height: 140px;
+    height: 100%;
     width: auto;
   }
 
@@ -139,6 +153,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+
   }
 
   .wrap-text > p:first-child{
@@ -158,9 +178,11 @@ body{
   .wrap-buttons{
     height: 42px;
     width: 40%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+
     display: flex;
     justify-content: center;
-
   }
 
   .wrap-buttons > #left-wrapper-btns{
@@ -206,11 +228,16 @@ body{
 @media (max-width: 767px){
 
   #wrapper-sec{
+    -webkit-justify-content: center;
     justify-content: center;
   }
 
   .main-sec{
     width: 100%;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
 
     display: flex;
     flex-direction: column;
@@ -230,6 +257,9 @@ body{
     position: relative;
     height: 25%;
 
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+
     display: flex;
     justify-content: center;
   }
@@ -248,6 +278,11 @@ body{
   /* Textos */
   .wrap-text{
     height: 47%;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
 
     display: flex;
     flex-direction: column;
@@ -277,6 +312,10 @@ body{
     width: 100%;
     top: 10px;
 
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,6 +324,7 @@ body{
   /* left */
   #left-wrapper-btns {
     position: relative;
+    height: 100%;
   }
 
   #left-wrapper-btns > button{

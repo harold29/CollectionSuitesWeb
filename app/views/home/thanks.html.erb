@@ -5,6 +5,9 @@
     background-position: center;
     background-repeat: no-repeat;
     /* particular de esta pagina*/
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: flex-start;
+
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -64,10 +67,16 @@
   @media (max-width: 933px) {
     .thanks-box{
       margin-right: 0px;
+      display: -webkit-flex;
+      -webkit-justify-content: space-around;
+      -webkit-align-items: center;
+      -webkit-flex-direction: column;
+
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-direction: column;
+
       height: 100%;
     }
 
