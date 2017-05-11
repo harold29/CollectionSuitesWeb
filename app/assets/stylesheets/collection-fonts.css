@@ -1,36 +1,36 @@
 /**
  * @license
  * MyFonts Webfont Build ID 3384014, 2017-05-04T11:43:55-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: Solomon-Black by Fontfabric
  * URL: http://www.myfonts.com/fonts/font-fabric/solomon/black-99953/
- * 
+ *
  * Webfont: Solomon-Thin by Fontfabric
  * URL: http://www.myfonts.com/fonts/font-fabric/solomon/thin-99953/
- * 
+ *
  * Webfont: Solomon-Book by Fontfabric
  * URL: http://www.myfonts.com/fonts/font-fabric/solomon/book-99953/
- * 
+ *
  * Webfont: Solomon-Bold by Fontfabric
  * URL: http://www.myfonts.com/fonts/font-fabric/solomon/bold-99953/
- * 
+ *
  * Webfont: Solomon-Light by Fontfabric
  * URL: http://www.myfonts.com/fonts/font-fabric/solomon/light-99953/
- * 
+ *
  * Webfont: Solomon-Normal by Fontfabric
  * URL: http://www.myfonts.com/fonts/font-fabric/solomon/normal-99953/
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3384014
  * Licensed pageviews: 10,000
  * Webfonts copyright: Copyright &#x00A9; 2010 By Svetoslav Simov &#x00A9; Fontfabric, LLC. All rights reserved.
- * 
+ *
  * © 2017 MyFonts Inc
 */
 
@@ -38,21 +38,20 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/33a2ce");
 
-  
+
 @font-face {font-family: 'Solomon-Black';src: url('webfonts/33A2CE_0_0.eot');src: url('webfonts/33A2CE_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_0_0.woff2') format('woff2'),url('webfonts/33A2CE_0_0.woff') format('woff'),url('webfonts/33A2CE_0_0.ttf') format('truetype'),url('webfonts/33A2CE_0_0.svg#wf') format('svg');}
- 
-  
+
+
 @font-face {font-family: 'Solomon-Thin';src: url('webfonts/33A2CE_1_0.eot');src: url('webfonts/33A2CE_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_1_0.woff2') format('woff2'),url('webfonts/33A2CE_1_0.woff') format('woff'),url('webfonts/33A2CE_1_0.ttf') format('truetype'),url('webfonts/33A2CE_1_0.svg#wf') format('svg');}
- 
-  
+
+
 @font-face {font-family: 'Solomon-Book';src: url('webfonts/33A2CE_2_0.eot');src: url('webfonts/33A2CE_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_2_0.woff2') format('woff2'),url('webfonts/33A2CE_2_0.woff') format('woff'),url('webfonts/33A2CE_2_0.ttf') format('truetype'),url('webfonts/33A2CE_2_0.svg#wf') format('svg');}
- 
-  
+
+
 @font-face {font-family: 'Solomon-Bold';src: url('webfonts/33A2CE_3_0.eot');src: url('webfonts/33A2CE_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_3_0.woff2') format('woff2'),url('webfonts/33A2CE_3_0.woff') format('woff'),url('webfonts/33A2CE_3_0.ttf') format('truetype'),url('webfonts/33A2CE_3_0.svg#wf') format('svg');}
- 
-  
+
+
 @font-face {font-family: 'Solomon-Light';src: url('webfonts/33A2CE_4_0.eot');src: url('webfonts/33A2CE_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_4_0.woff2') format('woff2'),url('webfonts/33A2CE_4_0.woff') format('woff'),url('webfonts/33A2CE_4_0.ttf') format('truetype'),url('webfonts/33A2CE_4_0.svg#wf') format('svg');}
- 
-  
+
+
 @font-face {font-family: 'Solomon-Normal';src: url('webfonts/33A2CE_5_0.eot');src: url('webfonts/33A2CE_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_5_0.woff2') format('woff2'),url('webfonts/33A2CE_5_0.woff') format('woff'),url('webfonts/33A2CE_5_0.ttf') format('truetype'),url('webfonts/33A2CE_5_0.svg#wf') format('svg');}
- 
