@@ -5,6 +5,9 @@
     background-position: center;
     background-repeat: no-repeat;
     /* particular de esta pagina*/
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: flex-start;
+
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -39,12 +42,10 @@
     font-size: 1.5em;
   }
 
-
   @media (min-width: 934px) {
     .thanks-box{
       margin-left: 50%;
       margin-top: 5%;
-
     }
 
     .wrap-logo{
@@ -64,10 +65,16 @@
   @media (max-width: 933px) {
     .thanks-box{
       margin-right: 0px;
+      display: -webkit-flex;
+      -webkit-justify-content: space-around;
+      -webkit-align-items: center;
+      -webkit-flex-direction: column;
+
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-direction: column;
+
       height: 100%;
     }
 
