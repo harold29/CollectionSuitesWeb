@@ -101,6 +101,7 @@
         display: -webkit-flex;
         -webkit-justify-content: center;
         -webkit-flex-direction: column;
+
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -176,7 +177,7 @@
 <script type="text/javascript">
  (function() {
   document.getElementById('gallery-icon-img').addEventListener('click', function(){
-    document.getElementsByClassName('image-space')[0].style.display = 'initial';
+    document.getElementsByClassName('image-space')[0].style.display = 'flex';
     document.getElementsByClassName('wrapper-slide')[0].style.display = 'flex';
     setTimeout(function(){
       document.getElementsByClassName('wrapper-slide')[0].classList.add('up');
@@ -187,8 +188,10 @@
     document.getElementsByClassName('wrapper-slide')[0].classList.remove('up');
     document.getElementById('current-img').classList.add('hide');
     setTimeout(function(){
-      document.getElementsByClassName('wrapper-slide')[0].style.display = 'none';
       document.getElementsByClassName('image-space')[0].style.display = 'none';
+    }, 0);
+    setTimeout(function(){
+      document.getElementsByClassName('wrapper-slide')[0].style.display = 'none';
     }, 2000);
   });
 

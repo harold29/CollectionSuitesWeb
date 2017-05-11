@@ -171,10 +171,10 @@ body{
   }
 
   .wrap-text > img{
-    height: 15% !important;
-    width: auto;
-    max-height: 40px;
     max-width: 297px;
+    max-height: 40px;
+    width: 50%;
+    height: auto;
     text-align: center;
   }
 
