@@ -148,6 +148,7 @@ body{
   /* Textos */
   .wrap-text{
     height: 47%;
+    width: auto;
 
     display: flex;
     flex-direction: column;
@@ -305,8 +306,12 @@ body{
     margin-top: 10%;
   }
 
-
-
+  .wrap-text > img{
+    max-width: 297px;
+    max-height: 40px;
+    width: 50%;
+    height: auto;
+  }
 
   /* Buttons */
   .wrap-buttons{
