@@ -184,6 +184,14 @@
     }, 0);
   });
 
+    document.getElementById('text-1').addEventListener('click', function(){
+    document.getElementsByClassName('image-space')[0].style.display = 'flex';
+    document.getElementsByClassName('wrapper-slide')[0].style.display = 'flex';
+    setTimeout(function(){
+      document.getElementsByClassName('wrapper-slide')[0].classList.add('up');
+    }, 0);
+  });
+
   document.getElementById('close').addEventListener('click', function(){
     document.getElementsByClassName('wrapper-slide')[0].classList.remove('up');
     document.getElementById('current-img').classList.add('hide');

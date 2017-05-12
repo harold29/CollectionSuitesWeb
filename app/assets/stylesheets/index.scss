@@ -91,10 +91,14 @@ p, h2{
 }
 
 #text-1{
+  cursor: pointer;
   p{
     @media screen and (max-width: 767px){
       margin-top: 1.5% !important;
       margin-bottom: 15% !important;
+    }
+    &:hover{
+      font-weight: bold;
     }
   }
 }
