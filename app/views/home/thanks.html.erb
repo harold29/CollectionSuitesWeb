@@ -1,9 +1,11 @@
 <style media="screen">
   body{
-    background: url('assets/background-bottles.jpg');
-    background-size: cover;
+    background-image: url('assets/background-bottles.jpg');
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat;
+
     /* particular de esta pagina*/
     -webkit-justify-content: flex-start;
     -webkit-align-items: flex-start;
@@ -21,7 +23,6 @@
     background: radial-gradient(ellipse at center, rgb(175,132,0) 0%, rgb(175,132,0) 0%, rgb(175,132,0) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
     border: none;
   }
-
 
   .line-body > p{
     color: white;
@@ -47,7 +48,6 @@
     .thanks-box{
       margin-left: 50%;
       margin-top: 5%;
-
     }
 
     .wrap-logo{
@@ -64,7 +64,12 @@
       text-align: left;
     }
   }
+
   @media (max-width: 933px) {
+    body{
+      background-position: 60% !important;
+    }
+    
     .thanks-box{
       margin-right: 0px;
       display: -webkit-flex;
@@ -104,6 +109,14 @@
 
   }
 
+  /* ubicacion central del logo */
+  @media (min-width: 934px) {
+
+  }
+
+  @media (max-width: 933px) and (min-awidth: 767px) {
+
+  }
 </style>
 
 <div class="thanks-box">

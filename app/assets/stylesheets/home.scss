@@ -227,6 +227,16 @@ body{
     top: 50%;
   }
 
+  @media (max-height: 790px) {
+    #logo {
+      height: 80%;
+    }
+    .wrap-text > p:first-child {
+      width: 60%;
+      margin-top: -10px;
+      font-size: 1.5em;
+    }
+  }
 }
 
 @media (max-width: 767px){

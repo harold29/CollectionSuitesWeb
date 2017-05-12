@@ -65,15 +65,13 @@
   }
 
   .form-register input{
+    width: 100%;
     border: 1px solid white;
     background-color: rgba(0, 0, 0, 0.59);
     padding: 5px 10px;
     color: white;
-    margin-right: 10%;
-  }
-
-  .form-register input {
     margin-bottom: 5px;
+    box-sizing: border-box;
   }
 
   .line-body > p {
@@ -106,7 +104,12 @@
   .line-footer > img {
     height: 7px;
     margin-bottom: 15px;
-    margin-right: 10%;
+    margin-right: 30px;
+  }
+
+  input[type=submit]{
+    text-align: right;
+    margin-right: 30px;
   }
 
   .line-footer > input {
@@ -118,7 +121,6 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
   }
-
 
   @media (min-width: 934px) {
     body{
@@ -158,6 +160,21 @@
     .form-register > div:first-child {
       width: 100%;
     }
+
+    .wrapper-inputs > div{
+      width: 50%;
+    }
+
+    .wrapper-inputs > div:first-child{
+      margin-left: 30px;
+      margin-right: 5px;
+    }
+
+    .wrapper-inputs > div:last-child{
+      margin-right: 30px;
+      margin-left: 5px;
+    }
+
 
     .form-register > div:last-child > div:first-child {
       margin-left: 30px;
@@ -214,6 +231,15 @@
       margin-bottom: 5px;
     }
 
+    .wrapper-inputs{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
+      display: flex;
+      flex-direction: column;
+
+    }
+
     .line-body > p{
       text-align: left;
       margin: 20% 10% 10% 10%;
@@ -268,7 +294,7 @@
       <div>
         <%= user.text_area :requirement, placeholder: "TYPE YOUR REQUEST", :rows => 10, :cols => 80%>
       </div>
-      <div>
+      <div class="wrapper-inputs">
         <div>
           <%= user.text_field :name, placeholder: "FIRST NAME" %>
           <%= user.text_field :last_name, placeholder: "LAST NAME" %>
