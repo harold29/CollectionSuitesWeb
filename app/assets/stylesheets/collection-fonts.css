@@ -37,18 +37,7 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/33a2ce");
-
-@font-face {
-  font-family: London;
-  src: url('London.ttf');
-  /* src: url('webfonts/33A2CE_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_0_0.woff2') format('woff2'),url('webfonts/33A2CE_0_0.woff') format('woff'),url('webfonts/33A2CE_0_0.ttf') format('truetype'),url('webfonts/33A2CE_0_0.svg#wf') format('svg'); */
-}
-
-@font-face {
-  font-family: London-Fill;
-  src: url('LondonFill.ttf');
-  /* src: url('webfonts/33A2CE_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_0_0.woff2') format('woff2'),url('webfonts/33A2CE_0_0.woff') format('woff'),url('webfonts/33A2CE_0_0.ttf') format('truetype'),url('webfonts/33A2CE_0_0.svg#wf') format('svg'); */
-}
+@import url('https://fonts.googleapis.com/css?family=Vidaloka');
 
 @font-face {
   font-family: Solomon-Black;
