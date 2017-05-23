@@ -89,6 +89,16 @@
   .title-paragraph{
     color: rgb(175,132,0);
   }
+  .title-paragraph-2{
+   color: rgb(175,132,0);
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+    padding: 0px 30%;
+    @media screen and (max-width: 767px){
+      padding: 0% 5% !important;
+    }
+  }
 
   .content-paragraph{
     color: rgb(255,255,255);
