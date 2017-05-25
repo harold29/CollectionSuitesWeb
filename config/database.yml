@@ -78,8 +78,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: cswebapp_production
+#   username: potator
+#   password: <%= ENV['CSWEBAPP_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
   database: cswebapp_production
   username: potator
-  password: <%= ENV['CSWEBAPP_DATABASE_PASSWORD'] %>
+  password: notupeonotupeo
