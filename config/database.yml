@@ -86,6 +86,6 @@ test:
 
 production:
   <<: *default
-  database: cswebapp_production
+  database: collectionsuitesweb
   username: potator
   password: notupeonotupeo
