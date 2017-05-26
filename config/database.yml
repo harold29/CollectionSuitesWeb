@@ -92,8 +92,20 @@ test:
 #   username: potator
 #   password: <%= ENV['CSWEBAPP_DATABASE_PASSWORD'] %>
 
+# production:
+#   <<: *default
+#   DATABASE_URL="collectionsuitesweb.c8nn4ylpto1k.us-west-2.rds.amazonaws.com"
+#   url: <%= ENV['DATABASE_URL'] %>
+#   database: collectionsuitesweb
+#   username: potator
+#   password: notupeonotupeo
+
+
 production:
-  <<: *default
-  database: collectionsuitesweb
-  username: potator
-  password: notupeonotupeo
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
