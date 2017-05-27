@@ -1,0 +1,1055 @@
+/* line 1, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.bc-float-logo {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+@media screen and (max-width: 950px) {
+  /* line 1, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .bc-float-logo {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  /* line 10, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  #cs-logo-text {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 10, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  #cs-logo-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 19, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .wrap-text {
+    height: 60% !important;
+  }
+}
+/* line 23, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.wrap-text p {
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1127px) {
+  /* line 23, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .wrap-text p {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 23, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .wrap-text p {
+    width: 80% !important;
+    /* height: 70% !important; */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 35, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .wrap-text > p:nth-child(2) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 41, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .wrap-text > p:first-child {
+    font-size: 1.5em;
+  }
+}
+
+/* line 47, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#bc-arrow {
+  position: absolute;
+  bottom: 5%;
+  transform: translatex(50%);
+  right: 50%;
+}
+
+/* line 54, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#bc-wrapper-1 {
+  height: 100%;
+}
+
+/* line 58, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#wrapper-sec {
+  margin-top: 7.5%;
+  height: 60%;
+}
+
+/* line 63, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#bc-wrapper-2 {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10% 0px;
+  background: url("background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 85, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.text-paragraph .title-paragraph, .text-paragraph .content-paragraph {
+  text-align: center;
+  padding: 0px 30%;
+}
+/* line 89, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.text-paragraph .title-paragraph {
+  color: #af8400;
+}
+/* line 92, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.text-paragraph .title-paragraph-2 {
+  color: #af8400;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0px 30%;
+}
+@media screen and (max-width: 767px) {
+  /* line 92, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .text-paragraph .title-paragraph-2 {
+    padding: 0% 5% !important;
+  }
+}
+/* line 103, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.text-paragraph .content-paragraph {
+  color: white;
+  letter-spacing: 0.5px;
+  margin-bottom: 100px;
+}
+/* line 109, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.text-paragraph .no-margin {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 115, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .content-paragraph {
+    padding: 0% 5% !important;
+  }
+}
+
+/* line 122, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#bc-wrapper-3 #bottles-section {
+  height: 80vh;
+  background: url("background-bottles.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 139, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#bc-wrapper-3 #footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #232426;
+}
+/* line 150, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+#bc-wrapper-3 #footer .wrapper-footer {
+  width: 50%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+}
+
+/* line 169, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.wrapper h2 {
+  color: #af8400;
+}
+/* line 172, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+.wrapper p {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  /* line 178, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .wrapper > * {
+    display: block;
+    text-align: right;
+  }
+}
+@media (max-width: 767px) {
+  /* line 185, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  #bc-wrapper-2 {
+    background-size: contain;
+    background-position: 0% 100%;
+    padding: 0% 10%;
+  }
+
+  /* line 191, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  .text-paragraph .content-paragraph {
+    margin-bottom: 30px;
+  }
+
+  /* line 196, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  #bc-wrapper-3 #bottles-section {
+    height: unset;
+    background: url("background-bottles.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 210, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/become.scss */
+  #bc-wrapper-3 .wrapper-footer {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/**
+ * @license
+ * MyFonts Webfont Build ID 3384014, 2017-05-04T11:43:55-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Solomon-Black by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/solomon/black-99953/
+ *
+ * Webfont: Solomon-Thin by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/solomon/thin-99953/
+ *
+ * Webfont: Solomon-Book by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/solomon/book-99953/
+ *
+ * Webfont: Solomon-Bold by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/solomon/bold-99953/
+ *
+ * Webfont: Solomon-Light by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/solomon/light-99953/
+ *
+ * Webfont: Solomon-Normal by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/solomon/normal-99953/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3384014
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2010 By Svetoslav Simov &#x00A9; Fontfabric, LLC. All rights reserved.
+ *
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+@import url("//hello.myfonts.net/count/33a2ce");
+@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+
+@font-face {
+  font-family: Solomon-Black;
+  src: url('Fontfabric - Solomon-Black.otf');
+  /* src: url('webfonts/33A2CE_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_0_0.woff2') format('woff2'),url('webfonts/33A2CE_0_0.woff') format('woff'),url('webfonts/33A2CE_0_0.ttf') format('truetype'),url('webfonts/33A2CE_0_0.svg#wf') format('svg'); */
+}
+
+@font-face {
+  font-family: Solomon-Thin;
+  src: url('Fontfabric - Solomon-Thin.otf');
+  /* src: url('webfonts/33A2CE_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_1_0.woff2') format('woff2'),url('webfonts/33A2CE_1_0.woff') format('woff'),url('webfonts/33A2CE_1_0.ttf') format('truetype'),url('webfonts/33A2CE_1_0.svg#wf') format('svg'); */
+}
+
+@font-face {
+  font-family: Solomon-Book;
+  src: url('Fontfabric - Solomon-Book.otf');
+  /* src: url('webfonts/33A2CE_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_2_0.woff2') format('woff2'),url('webfonts/33A2CE_2_0.woff') format('woff'),url('webfonts/33A2CE_2_0.ttf') format('truetype'),url('webfonts/33A2CE_2_0.svg#wf') format('svg'); */
+}
+
+@font-face {
+  font-family: Solomon-Bold;
+  src: url('Fontfabric - Solomon-Bold.otf');
+  /* src: url('webfonts/33A2CE_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_3_0.woff2') format('woff2'),url('webfonts/33A2CE_3_0.woff') format('woff'),url('webfonts/33A2CE_3_0.ttf') format('truetype'),url('webfonts/33A2CE_3_0.svg#wf') format('svg'); */
+}
+
+@font-face {
+  font-family: Solomon-Light;
+  src: url('Fontfabric - Solomon-Light.otf');
+  /* src: url('webfonts/33A2CE_4_0.eot'); */
+  /* src: url('webfonts/33A2CE_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_4_0.woff2') format('woff2'),url('webfonts/33A2CE_4_0.woff') format('woff'),url('webfonts/33A2CE_4_0.ttf') format('truetype'),url('webfonts/33A2CE_4_0.svg#wf') format('svg'); */
+}
+
+@font-face {
+  font-family: Solomon-Normal;
+  src: url('Fontfabric - Solomon-Normal.otf');
+  /* src: url('webfonts/33A2CE_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33A2CE_5_0.woff2') format('woff2'),url('webfonts/33A2CE_5_0.woff') format('woff'),url('webfonts/33A2CE_5_0.ttf') format('truetype'),url('webfonts/33A2CE_5_0.svg#wf') format('svg'); */
+}
+/* line 4, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+html {
+  height: 100%;
+}
+
+/* line 8, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+body {
+  background: #000;
+  height: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* line 22, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+#wrapper-sec {
+  width: 100%;
+  height: 50%;
+  margin: 0px;
+  background: url("cs-pattern.svg");
+  background-size: 110px;
+  display: -webkit-flex;
+}
+
+/* line 33, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+.wrap-text > p:nth-child(2) {
+  width: 50%;
+  font-size: 1em;
+  color: #8c8a81;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 28px;
+}
+
+/* line 42, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+#left-wrapper-btns > button, .ff-container input {
+  border: none;
+  background-color: #272427;
+  color: #af8400;
+  height: 21px;
+  width: 120px;
+}
+
+/* line 50, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+.ff-container input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/* line 54, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+.ff-container input:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+/* line 58, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+.ff-container input::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+/* line 62, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+.ff-container input:-ms-input-placeholder {
+  text-align: center;
+}
+
+/* line 66, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+#left-wrapper-btns > button:hover, .ff-container input:hover {
+  border: none;
+  background-color: #af8400;
+  color: #272427;
+}
+
+/* line 72, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+#left-wrapper-btns > a:hover, .ff-container input:hover {
+  border: none;
+  background-color: #af8400;
+  color: #272427;
+}
+
+/* line 78, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+.ff-container > input[type=submit] {
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+/* line 83, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+#left-wrapper-btns > button {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  /* line 89, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #wrapper-sec {
+    -webkit-justify-content: space-between;
+  }
+
+  /* line 92, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #left-border-gradient {
+    width: 15%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, black, transparent);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, black, transparent);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, black, transparent);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, black, transparent);
+    /* Standard syntax (must be last) */
+  }
+
+  /* line 100, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-border-gradient {
+    width: 15%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, transparent, black);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, transparent, black);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, transparent, black);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, transparent, black);
+    /* Standard syntax (must be last) */
+  }
+
+  /* line 109, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .main-sec {
+    width: 60%;
+    height: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Logo */
+  /* line 126, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-images {
+    position: relative;
+    height: 33%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* line 137, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #flare {
+    height: 50%;
+    position: absolute;
+    top: 0;
+  }
+
+  /* line 143, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #logo {
+    max-height: 140px;
+    height: 100%;
+    width: auto;
+  }
+
+  /* Textos */
+  /* line 150, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text {
+    height: 47%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+  }
+
+  /* line 166, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text > p:first-child {
+    width: 70%;
+    margin-top: 50px;
+    font-size: 2em;
+    color: #af8400;
+    text-align: center;
+  }
+
+  /* line 174, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text > img {
+    max-width: 297px;
+    max-height: 40px;
+    width: 50%;
+    height: auto;
+    text-align: center;
+  }
+
+  /* Buttons */
+  /* line 183, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-buttons {
+    height: 42px;
+    width: 40%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* line 193, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-buttons > #left-wrapper-btns {
+    margin-right: 60px;
+    height: 100%;
+  }
+
+  /* line 198, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .ff-container input {
+    width: 120px;
+    box-sizing: border-box;
+  }
+
+  /* left */
+  /* line 204, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #left-wrapper-btns {
+    position: relative;
+  }
+
+  /* line 208, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #left-wrapper-btns > button {
+    height: 21px;
+    width: 120px;
+    position: relative;
+    top: 50%;
+  }
+
+  /* right */
+  /* line 216, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-wrapper-btns {
+    position: relative;
+    top: 22px;
+  }
+
+  /* line 221, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-wrapper-btns > * {
+    position: relative;
+    height: 21px;
+    width: 120px;
+  }
+
+  /* line 227, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-wrapper-btns > .ff-container {
+    position: relative;
+    top: 50%;
+  }
+}
+@media (min-width: 768px) and (max-height: 790px) {
+  /* line 233, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #logo {
+    height: 80%;
+  }
+
+  /* line 236, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text > p:first-child {
+    width: 60%;
+    margin-top: -10px;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 767px) {
+  /* line 246, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #wrapper-sec {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  /* line 251, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .main-sec {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* line 264, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #left-border-gradient {
+    display: none;
+  }
+
+  /* line 268, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-border-gradient {
+    display: none;
+  }
+
+  /* Logo */
+  /* line 273, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-images {
+    position: relative;
+    height: 25%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* line 284, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #flare {
+    height: 50%;
+    position: absolute;
+    top: 0;
+  }
+
+  /* line 290, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #logo {
+    max-height: 100%;
+    width: auto;
+  }
+
+  /* Textos */
+  /* line 296, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text {
+    height: 47%;
+    width: auto;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* line 311, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text > p:first-child {
+    width: 85%;
+    height: auto;
+    margin: 0px;
+    font-size: 1.2em;
+    color: #af8400;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  /* line 321, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-text > img {
+    max-width: 297px;
+    max-height: 40px;
+    width: 50%;
+    height: auto;
+  }
+
+  /* Buttons */
+  /* line 329, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .wrap-buttons {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* left */
+  /* line 345, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #left-wrapper-btns {
+    position: relative;
+    height: 100%;
+  }
+
+  /* line 350, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #left-wrapper-btns > button {
+    position: relative;
+    top: 60px;
+    height: 50%;
+    box-sizing: border-box;
+    width: 150px;
+  }
+
+  /* right */
+  /* line 360, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-wrapper-btns {
+    position: relative;
+    top: 120px;
+  }
+
+  /* line 365, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  .ff-container input {
+    width: 150px;
+    box-sizing: border-box;
+  }
+
+  /* line 370, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home.scss */
+  #right-wrapper-btns > .ff-container {
+    position: relative;
+    top: 50%;
+  }
+}
+/* line 1, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home_guest.scss */
+#hg-index-text {
+  color: white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  margin-bottom: 4%;
+}
+@media screen and (max-width: 767px) {
+  /* line 1, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home_guest.scss */
+  #hg-index-text {
+    width: 95% !important;
+    font-size: 11px !important;
+  }
+}
+
+/* line 14, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home_guest.scss */
+#hg-text-2 {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 767px) {
+  /* line 14, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home_guest.scss */
+  #hg-text-2 {
+    width: 85% !important;
+    font-size: 11px !important;
+    margin-top: 5% !important;
+  }
+}
+
+/* line 28, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home_guest.scss */
+#hg-text-3 p a {
+  color: #AF8400;
+  font-size: 17px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+/* line 33, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/home_guest.scss */
+#hg-text-3 p a:hover {
+  font-weight: bold;
+}
+/* line 1, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+div {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 5, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  body {
+    background-size: contain !important;
+    background-position: 1% 100% !important;
+    background-repeat: no-repeat !important;
+    background-color: black !important;
+  }
+}
+
+/* line 15, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+p, h2 {
+  font-family: Solomon-Light;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 21, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-main-div-atp {
+  top: -5%;
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  /* line 21, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-main-div-atp {
+    top: 0%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 21, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-main-div-atp {
+    top: -2%;
+  }
+}
+
+/* line 32, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-title {
+  color: #AF8400;
+  width: 41%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  /* line 32, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-title {
+    width: 87% !important;
+  }
+}
+/* line 40, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-title h1 {
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  /* line 40, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-title h1 {
+    font-size: 16px !important;
+  }
+}
+
+/* line 48, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-subtitle {
+  color: white;
+  margin: 1.5%;
+}
+@media screen and (max-width: 767px) {
+  /* line 48, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-subtitle {
+    margin-top: 5% !important;
+    margin-right: 5% !important;
+  }
+}
+/* line 55, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-subtitle h2 {
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  /* line 55, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-subtitle h2 {
+    font-size: 12px !important;
+    color: white;
+  }
+}
+
+/* line 64, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-text {
+  color: white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  /* line 64, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-text {
+    width: 95% !important;
+    font-size: 11px !important;
+  }
+}
+
+/* line 76, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+.index-middle-text {
+  color: #AF8400;
+  font-size: 17px;
+}
+
+/* line 81, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#index-gallery-icon {
+  margin-top: 2%;
+}
+@media screen and (max-width: 767px) {
+  /* line 81, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #index-gallery-icon {
+    margin-top: 5% !important;
+    margin-top: 5% !important;
+  }
+}
+
+/* line 89, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#gallery-icon-img {
+  cursor: pointer;
+}
+
+/* line 93, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#text-1 {
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  /* line 95, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #text-1 p {
+    margin-top: 1.5% !important;
+    margin-bottom: 15% !important;
+  }
+}
+/* line 100, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#text-1 p:hover {
+  font-weight: bold;
+}
+
+/* line 106, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#text-2 {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 767px) {
+  /* line 106, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #text-2 {
+    width: 85% !important;
+    font-size: 11px !important;
+    margin-top: 5% !important;
+  }
+}
+
+/* line 119, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#yellow-ribbon {
+  background-color: #AF8400;
+  height: 5px;
+  width: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  /* line 119, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #yellow-ribbon {
+    width: 5% !important;
+    font-size: 14px;
+    margin-top: 5%;
+    height: 3px !important;
+  }
+}
+
+/* line 134, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#text-3 p a {
+  color: #AF8400;
+  font-size: 17px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+/* line 139, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#text-3 p a:hover {
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  /* line 134, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+  #text-3 p a {
+    margin-top: 1.5%;
+  }
+}
+
+/* line 150, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#hg-text-3 p a {
+  color: #AF8400;
+  font-size: 17px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+/* line 155, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/index.scss */
+#hg-text-3 p a:hover {
+  font-weight: bold;
+}
+/* line 1, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+div {
+  text-align: center;
+}
+
+/* line 5, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-main-div {
+  top: -5%;
+  position: relative;
+}
+
+/* line 10, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-title {
+  color: #d2aa08;
+  width: 41%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 15, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-title h1 {
+  font-weight: 400;
+}
+
+/* line 20, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-subtitle {
+  color: white;
+  margin: 1.5%;
+}
+/* line 23, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-subtitle h2 {
+  font-weight: 400;
+}
+
+/* line 28, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-text {
+  color: white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+/* line 36, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+.index-middle-text {
+  color: #d2aa08;
+  font-size: 17px;
+}
+
+/* line 41, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#index-gallery-icon {
+  margin-top: 2%;
+}
+
+/* line 45, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#text-2 {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* line 53, /home/peggysue/CollectionSuitesWeb/app/assets/stylesheets/vip-entrance.scss */
+#yellow-ribbon {
+  background-color: #d2aa08;
+  height: 5px;
+  width: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
