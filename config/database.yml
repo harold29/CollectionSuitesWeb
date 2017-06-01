@@ -37,7 +37,11 @@ development:
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  host: localhost
+  # host: localhost
+  # database: collectionsuitesweb
+  # username: potator
+  # password: notupeonotupeo
+
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
@@ -57,7 +61,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: cswebapp_test
+  # database: cswebapp_test
+  database: collectionsuitesweb
+  username: potator
+  password: notupeonotupeo
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -78,8 +86,27 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: cswebapp_production
+#   username: potator
+#   password: <%= ENV['CSWEBAPP_DATABASE_PASSWORD'] %>
+
+# production:
+#   <<: *default
+#   DATABASE_URL="collectionsuitesweb.c8nn4ylpto1k.us-west-2.rds.amazonaws.com"
+#   url: <%= ENV['DATABASE_URL'] %>
+#   database: collectionsuitesweb
+#   username: potator
+#   password: notupeonotupeo
+
+
 production:
   <<: *default
-  database: cswebapp_production
-  username: potator
-  password: <%= ENV['CSWEBAPP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
