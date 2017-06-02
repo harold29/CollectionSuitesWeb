@@ -64,7 +64,8 @@ test:
   # database: cswebapp_test
   database: collectionsuitesweb
   username: potator
-  password: notupeonotupeo
+  # password: notupeonotupeo
+  password: notupeo
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
