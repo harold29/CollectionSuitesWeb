@@ -66,10 +66,10 @@
 
 @font-face {
   font-family: Solomon-Light;
-  src: url('<%= asset_path("Fontfabric - Solomon-Light.otf") %>');
-  src: url('<%= asset_path("33A2CE#iefix") %>') format('embedded-opentype'),
-       url('<%= asset_path("33A2CE.woff") %>') format('woff'),
-       url('<%= asset_path("33A2CE.ttf") %>') format('truetype');
+  src: url('<%= asset_path("33A2CE_4_0.otf") %>');
+  src: url('<%= asset_path("33A2CE_4_0#iefix") %>') format('embedded-opentype'),
+       url('<%= asset_path("33A2CE_4_0.woff") %>') format('woff'),
+       url('<%= asset_path("33A2CE_4_0.ttf") %>') format('truetype');
 }
 
 @font-face {
