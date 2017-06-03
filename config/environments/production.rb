@@ -19,7 +19,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  
+
   config.assets.js_compressor = :uglifier
   config.assets.paths << "#{Rails.root}/app/assets/fonts"
   # config.assets.css_compressor = :sass
@@ -73,6 +73,9 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #Esta la puse yo
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
