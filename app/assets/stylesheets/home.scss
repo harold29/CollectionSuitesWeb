@@ -405,3 +405,13 @@ body{
     width: 100%;
     z-index: -1;
 }
+
+.collection-suites-box{
+  border: 10px solid rgb(175,132,0);
+  background: url(image-path('cs-pattern.svg')) black;
+  background-size: 110px;
+  box-shadow: 0px 0px 38px 25px rgba(25, 22, 22, 0.88);
+  /* height: 60%; */
+  width: 50%;
+  min-width: 40%;
+}
