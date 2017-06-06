@@ -75,7 +75,7 @@
 
   padding: 10% 0px;
 
-  background: url('background2.jpg');
+  background: url(image-path('background2.jpg'));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,7 +121,7 @@
 #bc-wrapper-3{
   #bottles-section{
     height: 80vh;
-    background: url('background-bottles.png');
+    background: url(image-path('background-bottles.jpg'));
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
