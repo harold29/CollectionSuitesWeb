@@ -392,3 +392,16 @@ body{
     width: 100%;
     z-index: -1;
 }
+
+.dummy-div-2{
+    background: url(image-path('background-bottles.jpg'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
