@@ -63,6 +63,23 @@
     bottom: 28px;
   }
 
+  .btn-become{
+    background: rgb(175,132,0);
+    background: -moz-radial-gradient(center, ellipse cover, rgb(175,132,0) 0%, rgb(175,132,0) 0%, rgb(175,132,0) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgb(175,132,0) 0%, rgb(175,132,0) 0%, rgb(175,132,0) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgb(175,132,0) 0%, rgb(175,132,0) 0%, rgb(175,132,0) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgb(175,132,0) 0%, rgb(175,132,0) 0%, rgb(175,132,0) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    background: radial-gradient(ellipse at center, rgb(175,132,0) 0%, rgb(175,132,0) 0%, rgb(175,132,0) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
+    border: none;
+    color: black;
+    padding: 0.5% 1%;
+    cursor: pointer;
+  }
+
+  .line-footer > .btn-become:hover{
+    font-weight: 900;
+  }
+
   @media (min-width: 934px) {
     body{
       background: url(assets/background2.jpg);
@@ -93,9 +110,14 @@
 
     .line-body{
       margin-top: 5%;
-      margin-bottom: 20%;
+      margin-bottom: 10%;
     }
 
+    .line-footer{
+      text-align: left;
+      margin-left: 20%;
+      margin-bottom: 10%;
+    }
   }
 
   @media (max-width: 933px) {
@@ -128,7 +150,6 @@
       position: unset;
       bottom: unset;
     }
-
 
     .line-body > p{
       text-align: left;
@@ -178,6 +199,9 @@
         font-size: 2em;
       }
 
+      .line-footer{
+        margin-bottom: 10%;
+      }
     }
   }
 
@@ -196,6 +220,8 @@
   <div class="line-body">
     <p style="font-family: 'Vidaloka', 'Times New Roman', serif;">THANK YOU FOR YOUR INTEREST IN COLLECTION SUITES</p>
     <p>Your information has been received. We will contact you shortly. If you have any questions please dial <br>+1 305.800.LUXE (5893)</p>
-
+  </div>
+  <div class="line-footer">
+    <button type="button" name="button" class="btn-become" onclick="location.href='/become.html';">Learn More</button>
   </div>
 </div>
