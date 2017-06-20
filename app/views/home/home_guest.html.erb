@@ -1,47 +1,189 @@
+<%= stylesheet_link_tag "jquery.fullPage.css" %>
 <style media="screen">
-  body{
-    /* background: url('assets/background2.jpg'); */
-    /* background-image: url('assets/background2.png'); */
-/*     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    -webkit-align-items: center;
-    align-items: center;
+  h1{
+    color: #af8400;
+    font-family: 'Vidaloka', 'Times New Roman', serif !important;
+    text-align: center;
+  }
+  h2{
+    color: rgb(183, 155, 70);
+    font-family: 'Vidaloka', 'Times New Roman', serif !important;
+    text-align: center;
+    margin: 0px;
+  }
+  h2.last{
+    margin-bottom: 10vh;
+  }
+  a, p{
+    color: #f3f3f3;
+    text-align: center;
+    font-family: Solomon-Light;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2;
   }
 
+  @media (min-width: 768px) {
+    .row-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      font-size: calc(8vw);
+    }
+    h2{
+      font-size: calc(5vw);
+    }
+    p{
+      font-size: 18px;
+    }
+    img{
+      max-width: calc(60vw);
+      flex-grow: 1;
+    }
+    .no-margin-top{
+      margin-top: 0px;
+    }
+    .pic-logo{
+      width: calc(40vw);
+      max-width: 620px;
+    }
+    .pic-logo-1{
+      width: calc(15vw);
+      max-width: 620px;
+    }
+    .wrap-groups{
+      display: flex;
+      flex-direction: row;
+    }
+    .group{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .group > img{
+      width: 80%;
+    }
+  }
 </style>
-
-<div class="dummy-div-1"></div>
-<div id="index-main-div-atp">
-  <div id="index-title">
-    <h1>DISCOVER THE ONLY PRIVATE PLACE WORTHY OF YOUR MOST VALUED COLLECTION</h1>
+<div id="cs-slider">
+  <div class="section">
+    <div class="slide">
+      <div class="row-content">
+        <h1>STOP IMAGINING</h1>
+      </div>
+    </div>
+  	<div class="slide">
+      <div class="row-content">
+        <%= image_tag "cs-logo.png", :class => 'pic-logo-1' %>
+        <br>
+        <%= image_tag "cs-logo-text.png", :class => 'pic-logo' %>
+      </div>
+  	</div>
+  	<div class="slide">
+      <div class="row-content">
+        <h2>THE COMPLEX</h2>
+    	  <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+        <p>38 SUITES / 4 BUILDINGS</p>
+      </div>
+  	</div>
+  	<div class="slide">
+      <div class="row-content">
+        <h2>THE COMPLEX</h2>
+    	  <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+      </div>
+  	</div>
+  	<div class="slide">
+      <div class="row-content">
+        <h2>THE SUITES</h2>
+        <div class="wrap-groups">
+          <div class="group">
+            <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+            <p>SUITE 'A'</p>
+          </div>
+          <div class="group">
+            <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+            <p>SUITE 'B'</p>
+          </div>
+        </div>
+      </div>
+  	</div>
+  	<div class="slide">
+      <h2>THE SUITES</h2>
+      <div class="wrap-groups">
+        <div class="group">
+          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <p>SUITE 'A'</p>
+        </div>
+        <div class="group">
+          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <p>SUITE 'B'</p>
+        </div>
+      </div>
+  	</div>
+  	<div class="slide">
+      <h2>ART COLLECTOR SUITE</h2>
+      <div class="wrap-groups">
+        <div class="group">
+          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <p>SUITE 'A'</p>
+        </div>
+        <div class="group">
+          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <p>SUITE 'B'</p>
+        </div>
+      </div>
+  	</div>
+  	<div class="slide">
+      <h2>CAR COLLECTOR SUITE</h2>
+      <div class="wrap-groups">
+        <div class="group">
+          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <p>SUITE 'A'</p>
+        </div>
+        <div class="group">
+          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <p>SUITE 'B'</p>
+        </div>
+      </div>
+  	</div>
+  	<div class="slide">
+      <h2>FEATURES</h2>
+      <p>38 SUITES UNITS FROM 1,850 TO 2,25</br>
+        PLUS 250 sq.ft MEZZANINE</br>
+        COMPLETELY AUTOMATED UNITS</br>
+        FULL ENTERTAINMENT SYSTEM</br>
+        SECURITY PACKAGE</br>
+        GATED COMMUNITY WITH THE STAGE OF THE ART SECURITY 24/7</br>
+        CONCIERGE SERVICES</br>
+      </p>
+    </div>
+  	<div class="slide">
+      <h2>BECOME A VIP MEMBER</h2>
+      <p class="no-margin-top">
+        AND LIVE THE EXPERIENCE OF OWNING YOUR SPACE<br>
+        TO ENJOY YOUR MOST TREASURED COLLECTIONS
+      </p>
+      <button type="button" name="button">REGISTER</button>
+    </div>
+    <div class="slide">
+    <h2 class="last">THANKS FOR REGISTERING</h2>
+    <p>
+      YOUR INFORMATION HAS BEEN RECEIVED.</br>
+      WE WILL CONTACT YOU SHORTL. IF YOU HAVE ANY QUESTIONS PLEASE DIAL</br>
+      <a href="callto:+13058005893">+1 305.800.(5893)</a></br>
+    </p>
   </div>
-  <div id="index-subtitle">
-    <h2>WELCOME TO COLLECTION SUITES</h2>
-  </div>
-  <div id="hg-index-text">
-    <p>Rising from the heart of Miami, Collection Suites will be 38 suites of
-    unprecedented luxury space. Arriving this summer, it will be an exclusive
-    private place for the most exquisite collections. Outfitted to reflect
-    your unique tastes, each suite offers a living space expressly designed
-    for you&#8212as an individual, as a lover of luxury, as a collector.</p>
-  </div>
-  <div id="yellow-ribbon"></div>
-  <div class="index-middle-text" id="hg-text-3">
-    <p><a href="/register_form">BECOME A VIP MEMBER</a></p>
-  </div>
-  <div class="index-middle-text" id="hg-text-2">
-    <p>BE AMONGST THE FIRST TO KNOW OF PROJECT UPDATES AS THEY BECOME AVAILABLE</p>
   </div>
 </div>
 
-
-
-<!-- <style media="screen">
-  body{
-    background: url('assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<%= javascript_include_tag 'jquery.fullPage.min.js' %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#cs-slider').fullpage();
+  });
+</script>
