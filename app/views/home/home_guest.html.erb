@@ -13,6 +13,7 @@
   }
   h2.last{
     margin-bottom: 10vh;
+    line-height: 1;
   }
   a, p{
     color: #f3f3f3;
@@ -21,7 +22,30 @@
     font-weight: bold;
     text-decoration: none;
     line-height: 2;
+    letter-spacing: 3px;
   }
+  .img-box::after{
+    content: '';
+    width: 0%;
+    height: 0%;
+  }
+  .img-box{
+    border: 2px solid #af8400;
+    cursor: pointer;
+  }
+  .btn-style{
+    background: none;
+    border: 1px solid #af8400;
+    padding: 10px 25px;
+    color: #f3f3f3;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  .btn-style:hover{
+    background: #af8400;
+  }
+
+
 
   @media (min-width: 768px) {
     .row-content{
@@ -58,6 +82,11 @@
       display: flex;
       flex-direction: row;
     }
+    .wrap-groups-dispair{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
     .group{
       display: flex;
       flex-direction: column;
@@ -66,6 +95,17 @@
     }
     .group > img{
       width: 80%;
+    }
+    .wrap-groups-dispair img {
+      max-height: 480px;
+    }
+    .group-dispair-full{
+      flex-grow: 2;
+      flex-shrink: 2;
+    }
+    .group-dispair-half{
+      flex-grow: 1;
+      flex-shrink: 1;
     }
   }
 </style>
@@ -78,34 +118,34 @@
     </div>
   	<div class="slide">
       <div class="row-content">
-        <%= image_tag "cs-logo.png", :class => 'pic-logo-1' %>
+        <img alt="" data-src="<%=asset_path 'cs-logo.png' %>">
         <br>
-        <%= image_tag "cs-logo-text.png", :class => 'pic-logo' %>
+        <img alt="" data-src="<%=asset_path 'cs-logo-text.png' %>">
       </div>
   	</div>
   	<div class="slide">
       <div class="row-content">
         <h2>THE COMPLEX</h2>
-    	  <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+        <img alt="" id="logo-text" data-src="<%=asset_path 'CollectionSuites_Exterior_1.jpg' %>">
         <p>38 SUITES / 4 BUILDINGS</p>
       </div>
   	</div>
   	<div class="slide">
       <div class="row-content">
         <h2>THE COMPLEX</h2>
-    	  <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+    	  <%= image_tag "Collection_Suites_Small.png" %>
       </div>
   	</div>
   	<div class="slide">
       <div class="row-content">
         <h2>THE SUITES</h2>
-        <div class="wrap-groups">
-          <div class="group">
-            <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+        <div class="wrap-groups-dispair">
+          <div class="group-dispair-full">
+            <img data-src="<%=asset_path 'Collection_Suites_Suite_A.png' %>">
             <p>SUITE 'A'</p>
           </div>
-          <div class="group">
-            <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
+          <div class="group-dispair-half">
+            <img data-src="<%=asset_path 'Collection_Suites_Suite_B.png' %>">
             <p>SUITE 'B'</p>
           </div>
         </div>
@@ -115,12 +155,12 @@
       <h2>THE SUITES</h2>
       <div class="wrap-groups">
         <div class="group">
-          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
-          <p>SUITE 'A'</p>
+          <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-box' %>
+          <p>ART COLLECTOR SUITE</p>
         </div>
         <div class="group">
-          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
-          <p>SUITE 'B'</p>
+          <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-box' %>
+          <p>CAR COLLECTOR SUITE</p>
         </div>
       </div>
   	</div>
@@ -128,12 +168,10 @@
       <h2>ART COLLECTOR SUITE</h2>
       <div class="wrap-groups">
         <div class="group">
-          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
-          <p>SUITE 'A'</p>
+          <%= image_tag "CollectionSuites_the_suites_art.jpg" %>
         </div>
         <div class="group">
-          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
-          <p>SUITE 'B'</p>
+          <%= image_tag "CollectionSuites_art_collector_suite_right.jpg" %>
         </div>
       </div>
   	</div>
@@ -141,12 +179,10 @@
       <h2>CAR COLLECTOR SUITE</h2>
       <div class="wrap-groups">
         <div class="group">
-          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
-          <p>SUITE 'A'</p>
+          <%= image_tag "CollectionSuites_car_collector_suite_left.jpg" %>
         </div>
         <div class="group">
-          <%= image_tag "CollectionSuites_Exterior_1.jpg", :id => 'logo-text'%>
-          <p>SUITE 'B'</p>
+          <%= image_tag "CollectionSuites_the_suites_cars.jpg" %>
         </div>
       </div>
   	</div>
@@ -163,11 +199,11 @@
     </div>
   	<div class="slide">
       <h2>BECOME A VIP MEMBER</h2>
-      <p class="no-margin-top">
+      <p class="no-margin-top" style="color:#af8400;">
         AND LIVE THE EXPERIENCE OF OWNING YOUR SPACE<br>
         TO ENJOY YOUR MOST TREASURED COLLECTIONS
       </p>
-      <button type="button" name="button">REGISTER</button>
+      <button class='btn-style' type="button" name="button">REGISTER</button>
     </div>
     <div class="slide">
     <h2 class="last">THANKS FOR REGISTERING</h2>
@@ -183,7 +219,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <%= javascript_include_tag 'jquery.fullPage.min.js' %>
 <script type="text/javascript">
+
+
   $(document).ready(function() {
-    $('#cs-slider').fullpage();
+    $('#cs-slider').fullpage({
+      continuousHorizontal: false,
+
+      parallax: false,
+		  parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+      lazyLoading: true
+    });
   });
 </script>
