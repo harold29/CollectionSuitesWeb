@@ -1,5 +1,16 @@
-<%= stylesheet_link_tag "jquery.fullPage.css" %>
-<style media="screen">
+<style>
+
+  html,body{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: unset;
+    overflow-x: hidden;
+  }
+
   h1{
     color: #af8400;
     font-family: 'Vidaloka', 'Times New Roman', serif !important;
@@ -44,15 +55,36 @@
   .btn-style:hover{
     background: #af8400;
   }
-
-
+  .container-slider{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+  }
+  .parafernalia-bottom-right{
+    max-height: 90px;
+    max-width: 25px;
+    bottom: 10px;
+    right: 15px;
+    position: fixed;
+  }
+  .section-content{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row-content{
+    width: 100%;
+  }
 
   @media (min-width: 768px) {
-    .row-content{
+    .container-slider{
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    }
+    .row-content{
+      width: 100vw;
     }
     h1{
       font-size: calc(8vw);
@@ -66,6 +98,23 @@
     img{
       max-width: calc(60vw);
       flex-grow: 1;
+    }
+    .parafernalia-bottom-right{
+      display: none;
+    }
+    .parafernalia-next {
+      position: fixed;
+      width: 228px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: 50% 50%;
+      cursor: pointer;
+
+      z-index: 999;
+    }
+    .parafernalia-next:hover {
+      box-shadow:
     }
     .no-margin-top{
       margin-top: 0px;
@@ -109,126 +158,140 @@
     }
   }
 </style>
-<div id="cs-slider">
-  <div class="section">
-    <div class="slide">
+
+  <%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-next', :id => 'btn-next' %>
+  <div class="container-slider">
+    <%= image_tag "go-down.png", :class => 'parafernalia-bottom-right' %>
+    <div class="section-content">
       <div class="row-content">
         <h1>STOP IMAGINING</h1>
       </div>
     </div>
-  	<div class="slide">
+  	<div class="section-content">
       <div class="row-content">
-        <img alt="" data-src="<%=asset_path 'cs-logo.png' %>">
+        <%= image_tag "cs-logo.png" %>
         <br>
-        <img alt="" data-src="<%=asset_path 'cs-logo-text.png' %>">
+        <%= image_tag "cs-logo-text.png" %>
       </div>
   	</div>
-  	<div class="slide">
+  	<div class="section-content">
       <div class="row-content">
         <h2>THE COMPLEX</h2>
-        <img alt="" id="logo-text" data-src="<%=asset_path 'CollectionSuites_Exterior_1.jpg' %>">
+        <img alt="section-content" id="logo-text" src="<%=asset_path 'CollectionSuites_Exterior_1.jpg' %>">
         <p>38 SUITES / 4 BUILDINGS</p>
       </div>
   	</div>
-  	<div class="slide">
+  	<div class="section-content">
       <div class="row-content">
         <h2>THE COMPLEX</h2>
     	  <%= image_tag "Collection_Suites_Small.png" %>
       </div>
   	</div>
-  	<div class="slide">
+  	<div class="section-content">
       <div class="row-content">
         <h2>THE SUITES</h2>
         <div class="wrap-groups-dispair">
           <div class="group-dispair-full">
-            <img data-src="<%=asset_path 'Collection_Suites_Suite_A.png' %>">
+            <img src="<%=asset_path 'Collection_Suites_Suite_A.png' %>">
             <p>SUITE 'A'</p>
           </div>
           <div class="group-dispair-half">
-            <img data-src="<%=asset_path 'Collection_Suites_Suite_B.png' %>">
+            <img src="<%=asset_path 'Collection_Suites_Suite_B.png' %>">
             <p>SUITE 'B'</p>
           </div>
         </div>
       </div>
   	</div>
-  	<div class="slide">
-      <h2>THE SUITES</h2>
-      <div class="wrap-groups">
-        <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-box' %>
-          <p>ART COLLECTOR SUITE</p>
-        </div>
-        <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-box' %>
-          <p>CAR COLLECTOR SUITE</p>
-        </div>
-      </div>
-  	</div>
-  	<div class="slide">
-      <h2>ART COLLECTOR SUITE</h2>
-      <div class="wrap-groups">
-        <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_art.jpg" %>
-        </div>
-        <div class="group">
-          <%= image_tag "CollectionSuites_art_collector_suite_right.jpg" %>
+  	<div class="section-content">
+      <div class="row-content">
+        <h2>THE SUITES</h2>
+        <div class="wrap-groups">
+          <div class="group">
+            <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-box' %>
+            <p>ART COLLECTOR SUITE</p>
+          </div>
+          <div class="group">
+            <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-box' %>
+            <p>CAR COLLECTOR SUITE</p>
+          </div>
         </div>
       </div>
   	</div>
-  	<div class="slide">
-      <h2>CAR COLLECTOR SUITE</h2>
-      <div class="wrap-groups">
-        <div class="group">
-          <%= image_tag "CollectionSuites_car_collector_suite_left.jpg" %>
-        </div>
-        <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_cars.jpg" %>
+  	<div class="section-content">
+      <div class="row-content">
+        <h2>ART COLLECTOR SUITE</h2>
+        <div class="wrap-groups">
+          <div class="group">
+            <%= image_tag "CollectionSuites_the_suites_art.jpg" %>
+          </div>
+          <div class="group">
+            <%= image_tag "CollectionSuites_art_collector_suite_right.jpg" %>
+          </div>
         </div>
       </div>
   	</div>
-  	<div class="slide">
-      <h2>FEATURES</h2>
-      <p>38 SUITES UNITS FROM 1,850 TO 2,25</br>
-        PLUS 250 sq.ft MEZZANINE</br>
-        COMPLETELY AUTOMATED UNITS</br>
-        FULL ENTERTAINMENT SYSTEM</br>
-        SECURITY PACKAGE</br>
-        GATED COMMUNITY WITH THE STAGE OF THE ART SECURITY 24/7</br>
-        CONCIERGE SERVICES</br>
-      </p>
+  	<div class="section-content">
+      <div class="row-content">
+        <h2>CAR COLLECTOR SUITE</h2>
+        <div class="wrap-groups">
+          <div class="group">
+            <%= image_tag "CollectionSuites_car_collector_suite_left.jpg" %>
+          </div>
+          <div class="group">
+            <%= image_tag "CollectionSuites_the_suites_cars.jpg" %>
+          </div>
+        </div>
+      </div>
+  	</div>
+  	<div class="section-content">
+      <div class="row-content">
+        <h2>FEATURES</h2>
+        <p>
+          38 SUITES UNITS FROM 1,850 TO 2,25</br>
+          PLUS 250 sq.ft MEZZANINE</br>
+          COMPLETELY AUTOMATED UNITS</br>
+          FULL ENTERTAINMENT SYSTEM</br>
+          SECURITY PACKAGE</br>
+          GATED COMMUNITY WITH THE STAGE OF THE ART SECURITY 24/7</br>
+          CONCIERGE SERVICES</br>
+        </p>
+      </div>
     </div>
-  	<div class="slide">
-      <h2>BECOME A VIP MEMBER</h2>
-      <p class="no-margin-top" style="color:#af8400;">
-        AND LIVE THE EXPERIENCE OF OWNING YOUR SPACE<br>
-        TO ENJOY YOUR MOST TREASURED COLLECTIONS
-      </p>
-      <button class='btn-style' type="button" name="button">REGISTER</button>
+  	<div class="section-content">
+      <div class="row-content">
+        <h2>BECOME A VIP MEMBER</h2>
+        <p class="no-margin-top" style="color:#af8400;">
+          AND LIVE THE EXPERIENCE OF OWNING YOUR SPACE<br>
+          TO ENJOY YOUR MOST TREASURED COLLECTIONS
+        </p>
+        <button class='btn-style' type="button" name="button">REGISTER</button>
+      </div>
     </div>
-    <div class="slide">
-    <h2 class="last">THANKS FOR REGISTERING</h2>
-    <p>
-      YOUR INFORMATION HAS BEEN RECEIVED.</br>
-      WE WILL CONTACT YOU SHORTL. IF YOU HAVE ANY QUESTIONS PLEASE DIAL</br>
-      <a href="callto:+13058005893">+1 305.800.(5893)</a></br>
-    </p>
+    <div class="section-content">
+      <div class="row-content">
+        <h2 class="last">THANKS FOR REGISTERING</h2>
+        <p>
+          YOUR INFORMATION HAS BEEN RECEIVED.</br>
+          WE WILL CONTACT YOU SHORTL. IF YOU HAVE ANY QUESTIONS PLEASE DIAL</br>
+          <a href="callto:+13058005893">+1 305.800.(5893)</a></br>
+        </p>
+      </div>
+    </div>
   </div>
-  </div>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<%= javascript_include_tag 'jquery.fullPage.min.js' %>
 <script type="text/javascript">
+  (function(){
+    var size_screen = -1*window.innerWidth;
+    var clickNumber = 0;
+    document.getElementById('btn-next').addEventListener('click', function(){
+      clickNumber += 1;
+      size_ = size_screen*clickNumber;
 
-
-  $(document).ready(function() {
-    $('#cs-slider').fullpage({
-      continuousHorizontal: false,
-
-      parallax: false,
-		  parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
-      lazyLoading: true
+      document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+      // optimizar considerando cambios de tama;o previo
+      size_ = size_ - window.innerWidth;
+      return false;
     });
-  });
+  })();
 </script>
