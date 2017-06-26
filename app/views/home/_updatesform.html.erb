@@ -1,0 +1,291 @@
+<style media="screen">
+  .line-top{
+    position: relative;
+    top: 0px;
+    text-align: right;
+  }
+
+  .line-top span a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .line-top span a:hover {
+    font-weight: bold;
+  }
+
+  .line-logo{
+    /* height: 100%; */
+    width: 100%;
+    text-align: left;
+  }
+
+  .close{
+    position: relative;
+    right: 15px;
+    top: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    cursor: pointer;
+  }
+
+  .wrap-logo{
+    text-align: left;
+  }
+
+  .wrap-logo > #logo{
+    margin-left: 30px;
+    max-height: 110px;
+  }
+
+  .wrap-logo > #logo-text{
+    position: relative;
+    bottom: 28px;
+  }
+
+  .form-register{
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-register input{
+    width: 100%;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.59);
+    padding: 10px;
+    color: white;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+  }
+
+  .line-body > p {
+    text-align: left;
+    margin: 0px 30px 10px 30px;
+    color: rgb(255,255,255);
+  }
+
+  .line-body > p > span{
+    color: rgb(175,132,0);
+  }
+
+  .line-footer{
+    text-align: right;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .line-footer > * {
+    cursor: pointer;
+  }
+
+  .line-footer > img {
+    height: 7px;
+    margin-bottom: 15px;
+    margin-right: 30px;
+  }
+
+  input[type=submit]{
+    text-align: right;
+    margin-right: 30px;
+  }
+
+  .line-footer input[type="submit"]:hover {
+    font-weight: bold;
+  }
+
+  .line-footer > input {
+    background: none;
+    color: rgb(175,132,0);
+    border: none;
+    padding-right: 0px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .line-footer > img {
+    cursor: unset;
+  }
+  @media (min-width: 934px) {
+    .line-body{
+      margin-bottom: 5%;
+      margin-top: 5%;
+    }
+
+    .form-register > div {
+      display: flex;
+      width: 100%;
+    }
+
+    .form-register textarea{
+      margin: 0px 30px 10px 30px;
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.59);
+      padding: 10px;
+      color: white;
+      width: 100%;
+    }
+
+    .form-register > div:last-child > div {
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    .form-register > div:first-child {
+      width: 100%;
+    }
+
+    .wrapper-inputs > div{
+      width: 50%;
+    }
+
+    .wrapper-inputs > div:first-child{
+      margin-left: 30px;
+      margin-right: 5px;
+    }
+
+    .wrapper-inputs > div:last-child{
+      margin-right: 30px;
+      margin-left: 5px;
+    }
+
+
+    .form-register > div:last-child > div:first-child {
+      margin-left: 30px;
+      margin-right: 5px;
+    }
+
+    .form-register > div:last-child > div:last-child {
+      margin-left: 5px;
+      margin-right: 30px;
+    }
+
+    .line-footer{
+      margin-right: 30px;
+    }
+  }
+
+  @media (max-width: 933px) {
+    .wrap-logo {
+      display: -webkit-flex;
+      -webkit-align-items: center;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .wrap-logo > #logo {
+      margin-left: 10%;
+      max-width: 100px;
+      width: 20%;
+    }
+
+    .wrap-logo > #logo-text {
+      width: 60%;
+      max-width: 243px;
+      position: unset;
+      bottom: unset;
+    }
+
+    .form-register textarea{
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.59);
+      padding: 0px 10px;
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+
+    .wrapper-inputs{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .line-body > p{
+      text-align: left;
+      margin: 20% 10% 10% 10%;
+    }
+
+    .form-register > div{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
+      display: flex;
+      flex-direction: column;
+      margin: 0px 10%;
+    }
+
+    .form-register input{
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .line-footer{
+      margin-right: 10%;
+    }
+
+    @media (max-width: 767px) {
+      .collection-suites-box {
+        margin-top: 3%;
+        width: 90% !important;
+      }
+    }
+  }
+</style>
+<div class="collection-suites-box">
+  <div class="line-top">
+    <span class="close">X</span>
+  </div>
+  <div class="line-logo">
+    <div class="wrap-logo">
+      <%= image_tag "cs-logo.png", :id => 'logo'%>
+      <%= image_tag "cs-logo-text.png", :id => 'logo-text'%>
+    </div>
+  </div>
+  <div class="line-body">
+    <p>Become a <span>VIP Member of Collection Suites</span> by filling out the form below to receive your exclusive activate code</p>
+    <%  %>
+    <!-- Fix -->
+    <%= form_for User.new, url: { action: "updateuser" }, html: { class: "form-register" } do |user| %>
+      <div>
+        <%= user.text_area :requirement, placeholder: "TYPE YOUR REQUEST", :rows => 6, :cols => 80%>
+      </div>
+      <div class="wrapper-inputs">
+        <div>
+          <%= user.text_field :name, placeholder: "FIRST NAME" %>
+          <%= user.text_field :last_name, placeholder: "LAST NAME" %>
+          <%= user.telephone_field :p1, placeholder: "PHONE" %>
+        </div>
+        <div>
+          <%= user.text_field :zip, placeholder: "ZIP CODE" %>
+          <%= user.email_field :email, placeholder: "EMAIL" %>
+        </div>
+      </div>
+      <div class="line-footer">
+        <%= image_tag "rectangulo.png" %>
+        <%= user.submit "submit"%>
+      </div>
+    <% end %>
+  </div>
+</div>
