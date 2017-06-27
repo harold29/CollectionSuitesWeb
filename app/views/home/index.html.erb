@@ -29,7 +29,7 @@
       font-family: sans-serif;
     }
     .collection-suites-box{
-       border: 10px solid rgb(175,132,0);
+       border: 10px solid rgb(159, 108, 56);
        background: url('assets/cs-pattern.svg') black;
        background-size: 110px;
        width: 50%;
@@ -51,12 +51,12 @@
   }
 
   h1{
-    color: #af8400;
+    color: rgb(159, 108, 56);
     font-family: 'Vidaloka', 'Times New Roman', serif !important;
     text-align: center;
   }
   h2{
-    color: rgb(183, 155, 70);
+    color: rgb(159, 108, 56);
     font-family: 'Vidaloka', 'Times New Roman', serif !important;
     text-align: center;
     margin: 0px;
@@ -74,31 +74,35 @@
     line-height: 2;
     letter-spacing: 3px;
   }
+  p{
+    padding: 0px 10vw 0px 10vw;
+  }
+  img{
+    max-width: 80vw;
+    max-height: auto;
+  }
   .img-box::after{
     content: '';
     width: 0%;
     height: 0%;
   }
   .img-box{
-    border: 2px solid #af8400;
+    border: 2px solid rgb(159, 108, 56);
     cursor: pointer;
   }
   .btn-style{
     background: none;
-    border: 1px solid #af8400;
+    border: 1px solid rgb(159, 108, 56);
     padding: 10px 25px;
     color: #f3f3f3;
     font-size: 1.2em;
     cursor: pointer;
   }
   .btn-style:hover{
-    background: #af8400;
+    background: rgb(159, 108, 56);
   }
   .container-slider{
-    height: 100vh;
-    width: 100vw;
     box-sizing: border-box;
-    /* overflow: hidden; */
   }
   .parafernalia-bottom-right{
     max-height: 90px;
@@ -107,6 +111,8 @@
     right: 15px;
     position: fixed;
   }
+
+
   .section-content{
     height: 100vh;
     width: 100vw;
@@ -116,6 +122,18 @@
   }
   .row-content{
     width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .container-slider {
+      display: none;
+    }
+
+    #modal-form,
+    .parafernalia-next,
+    .parafernalia-back{
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {
@@ -130,24 +148,28 @@
       width: 100vw;
     }
     h1{
-      font-size: calc(8vw);
+      font-size: 8vw;
     }
     h2{
-      font-size: calc(5vw);
+      font-size: 5vw;
     }
     p{
       font-size: 18px;
     }
     img{
-      max-width: calc(60vw);
+      max-width: 60vw;
       flex-grow: 1;
     }
     .parafernalia-bottom-right{
       display: none;
     }
+
+
     .parafernalia-next {
       position: fixed;
-      width: 228px;
+      width: 16vw;
+      max-width: 228px;
+      min-width: 120px;
       right: 0;
       top: 50%;
       transform: translateY(-50%) rotate(-90deg);
@@ -159,7 +181,9 @@
     .parafernalia-back {
       position: fixed;
       display: none;
-      width: 228px;
+      width: 16vw;
+      max-width: 228px;
+      min-width: 120px;
       left: 0;
       top: 50%;
       transform: translateY(-50%) rotate(90deg);
@@ -228,6 +252,7 @@
     }
 
   }
+
 </style>
 
 <%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-next', :id => 'btn-next' %>
@@ -335,7 +360,7 @@
 	<div class="section-content">
     <div class="row-content">
       <h2>BECOME A VIP MEMBER</h2>
-      <p class="no-margin-top" style="color:#af8400;">
+      <p class="no-margin-top" style="color:rgb(159, 108, 56);">
         AND LIVE THE EXPERIENCE OF OWNING YOUR SPACE<br>
         TO ENJOY YOUR MOST TREASURED COLLECTIONS
       </p>
@@ -356,12 +381,15 @@
 
 <div class="video">
   <span id="close-video-tag">X</span>
-  <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay controls poster="/assets/preload_image.png" width="100%" height='100%'></video>
+  <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>
 </div>
 
 <script type="text/javascript">
  (function() {
   document.getElementById('close-video-tag').addEventListener('click', function(){
+    if (window.innerWidth < 768) {
+      document.getElementsByClassName('container-slider')[0].style.display = 'unset';
+    }
 
     document.getElementById("tag-video").pause();
     document.getElementsByClassName('video')[0].classList.add('hide');
@@ -385,8 +413,8 @@
       document.getElementById('modal-form').style.display = 'none';
     },1000);
   });
+})();
 
- })();
 </script>
 <script type="text/javascript">
   (function(){
@@ -407,28 +435,46 @@
         document.getElementById('btn-next').style.display = 'none';
       }
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
-
-      // optimizar considerando cambios de tama;o previo
-      size_ = size_ - window.innerWidth;
       return false;
     });
     document.getElementById('btn-back').addEventListener('click', function(){
       clickNumber -= 1;
       size_ = size_screen*clickNumber;
-
       // optimizar
       if (clickNumber < 1) {
         document.getElementById('btn-back').style.display = 'none';
       }
-      if (clickNumber < 8) {
+      if (clickNumber < 9) {
         document.getElementById('btn-next').style.display = 'unset';
       }
 
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
-      // optimizar considerando cambios de tama;o previo
-      size_ = size_ - window.innerWidth;
       return false;
     });
 
+    function debounce(func, wait, immediate) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+    var myEfficientFn = debounce(function() {
+
+      size_screen = -1*window.innerWidth;
+      size_ = size_screen*clickNumber;
+      document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+
+    }, 250);
+
+    window.addEventListener('resize', myEfficientFn);
   })();
 </script>
