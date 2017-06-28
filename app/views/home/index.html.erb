@@ -76,7 +76,7 @@
     letter-spacing: 3px;
   }
   p{
-    padding: 0px 10vw 0px 10vw;
+    padding: 0px 9vw 0px 9vw;
   }
   img{
     max-width: 80vw;
@@ -130,11 +130,30 @@
     .parafernalia-back{
       display: none !important;
     }
+
+    .container-slider{
+      display: block !important;
+    }
+
+    .group-dispair-full > img{
+      max-width: 65vw;
+      height: auto;
+    }
+
+    .group-dispair-half > img {
+      max-height: 40vh;
+      width: auto;
+    }
+
+    .group > img {
+      max-width: 65vw;
+    }
+
   }
 
   @media (min-width: 768px) {
     .container-slider{
-      display: flex;
+      display: flex !important;
       transform: translateX(0px);
       transition: transform 1s;
       transition-timing-function: ease-out;
@@ -159,8 +178,6 @@
     .parafernalia-bottom-right{
       display: none;
     }
-
-
     .parafernalia-next {
       position: fixed;
       width: 16vw;
@@ -203,32 +220,37 @@
     .wrap-groups{
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
     .wrap-groups-dispair{
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
     }
     .group{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      margin-left: 5px;
+      margin-right: 5px;
     }
     .group > img{
-      width: 80%;
+      width: 35vw;
     }
+
     .wrap-groups-dispair img {
       max-height: 480px;
     }
-    .group-dispair-full{
-      flex-grow: 2;
-      flex-shrink: 2;
+    .group-dispair-full > img{
+      max-width: 40vw;
+      height: auto;
     }
-    .group-dispair-half{
-      flex-grow: 1;
-      flex-shrink: 1;
+
+    .group-dispair-half > img {
+      max-height: 30vw;
+      width: auto;
     }
+
     #modal-form{
       display: none;
       position: absolute;
@@ -470,11 +492,11 @@
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
 
       if( (-1)*size_screen > 767){
-        document.getElementsByClassName('container-slider')[0].style.display = 'flex';
+        //document.getElementsByClassName('container-slider')[0].style.display = 'flex';
         document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
       } else {
         // version no optimizada
-        document.getElementsByClassName('container-slider')[0].style.display = "unset";
+        //document.getElementsByClassName('container-slider')[0].style.display = "unset";
         document.getElementsByClassName('container-slider')[0].style.transform = "translateX(0px)";
       }
 
