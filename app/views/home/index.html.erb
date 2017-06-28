@@ -112,7 +112,6 @@
     position: fixed;
   }
 
-
   .section-content{
     height: 100vh;
     width: 100vw;
@@ -125,10 +124,6 @@
   }
 
   @media (max-width: 767px) {
-    .container-slider {
-      display: none;
-    }
-
     #modal-form,
     .parafernalia-next,
     .parafernalia-back{
@@ -378,7 +373,6 @@
     </div>
   </div>
 </div>
-
 <div class="video">
   <span id="close-video-tag">X</span>
   <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>
@@ -387,14 +381,17 @@
 <script type="text/javascript">
  (function() {
   document.getElementById('close-video-tag').addEventListener('click', function(){
+    /*
     if (window.innerWidth < 768) {
       document.getElementsByClassName('container-slider')[0].style.display = 'unset';
     }
-
+    */
     document.getElementById("tag-video").pause();
     document.getElementsByClassName('video')[0].classList.add('hide');
     var child = document.getElementsByClassName("video")[0];
     child.parentNode.removeChild(child);
+
+    //document.getElementsByTagName('body')[0].style.overflowY = 'unset';
 
   });
 
@@ -408,6 +405,7 @@
   });
 
   document.getElementsByClassName('close')[0].addEventListener('click', function(){
+
     document.getElementById('modal-form').dataset.showup = 'false';
     setTimeout(function(){
       document.getElementById('modal-form').style.display = 'none';
@@ -440,6 +438,7 @@
     document.getElementById('btn-back').addEventListener('click', function(){
       clickNumber -= 1;
       size_ = size_screen*clickNumber;
+
       // optimizar
       if (clickNumber < 1) {
         document.getElementById('btn-back').style.display = 'none';
@@ -472,6 +471,11 @@
       size_screen = -1*window.innerWidth;
       size_ = size_screen*clickNumber;
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+
+      if(size_screen > 767){
+        console.log(size_screen);
+        document.getElementsByClassName('container-slider')[0].style.display = 'flex';
+      }
 
     }, 250);
 
