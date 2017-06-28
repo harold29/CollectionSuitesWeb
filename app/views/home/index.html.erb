@@ -383,11 +383,6 @@
 <script type="text/javascript">
  (function() {
   document.getElementById('close-video-tag').addEventListener('click', function(){
-    /*
-    if (window.innerWidth < 768) {
-      document.getElementsByClassName('container-slider')[0].style.display = 'unset';
-    }
-    */
     document.getElementById("tag-video").pause();
     document.getElementsByClassName('video')[0].classList.add('hide');
     var child = document.getElementsByClassName("video")[0];
@@ -470,13 +465,17 @@
 
     var myEfficientFn = debounce(function() {
 
-      size_screen = -1*window.innerWidth;
+      size_screen = (-1)*window.innerWidth;
       size_ = size_screen*clickNumber;
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
 
-      if(size_screen > 767){
-        console.log(size_screen);
+      if( (-1)*size_screen > 767){
         document.getElementsByClassName('container-slider')[0].style.display = 'flex';
+        document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+      } else {
+        // version no optimizada
+        document.getElementsByClassName('container-slider')[0].style.display = "unset";
+        document.getElementsByClassName('container-slider')[0].style.transform = "translateX(0px)";
       }
 
     }, 250);
