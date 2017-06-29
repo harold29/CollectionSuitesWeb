@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3629 4000.785 80.578 52.912">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.526;
+      }
+
+      .cls-2 {
+        filter: url(#Subtraction_35);
+      }
+    </style>
+    <filter id="Subtraction_35" x="-3629" y="4000.785" width="80.578" height="52.912" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="Subtraction_35-2" data-name="Subtraction 35" class="cls-1" d="M25.289,22.912,0,4.019,5.38,0,25.289,14.873,45.2,0l5.38,4.019Z" transform="translate(-3614 4012.79)"/>
+  </g>
+</svg>

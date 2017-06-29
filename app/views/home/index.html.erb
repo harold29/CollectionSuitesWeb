@@ -1,58 +1,4 @@
-
 <style media="screen">
-  body{
-/*     background: url('assets/background2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-    .wrapper-slide{
-      width: 100%;
-      height: 100%;
-      display: none;
-      position: absolute;
-      transform: translateX(-25%);
-      will-change: transform;
-      transition: all 1s ease-out 0s;
-    }
-
-    .wrapper-slide.up{
-      transform: translateX(0%);
-    }
-
-    .slide{
-      background-color: #000;
-      height: 100%;
-      width: 25%;
-      left: 0;
-    }
-
-    .image-space{
-      width: 75%;
-      height: 100%;
-      background-color: transparent;
-      display: none;
-    }
-
-    #current-img{
-      width: 100%;
-      height: 100%;
-    }
-
-    .hide{
-      display: none;
-    }
-
-    .galery{
-      height: auto;
-      width: 50%;
-      max-width: 300px;
-      cursor: pointer;
-    }
-
     video{
       height: 100vh;
       width: 100vw;
@@ -70,7 +16,6 @@
       top: 0;
       left: 0;
     }
-
     .video > #close-video-tag{
       position: absolute;
       top: 30px;
@@ -83,148 +28,480 @@
       padding: 15px;
       font-family: sans-serif;
     }
-
-    @media (max-width:767px) {
-      .list-slide{
-        padding: 0px;
-      }
-      .galery{
-        width: 80%;
-      }
-
-      #current-img {
-        height: auto;
-      }
-
-      .image-space {
-        background-color: black;
-        display: -webkit-flex;
-        -webkit-justify-content: center;
-        -webkit-flex-direction: column;
-
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 70%;
-        padding-left: 2%;
-      }
-
-      .wrapper-slide.up {
-        background: black;
-      }
-    }
+    .collection-suites-box{
+       border: 10px solid rgb(159, 108, 56);
+       background: url('assets/cs-pattern.svg') black;
+       background-size: 110px;
+       width: 50%;
+       min-width: 40%;
+       box-shadow: unset;
+     }
 </style>
 
+<style>
+  html,body{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: unset;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  h1{
+    color: rgb(159, 108, 56);
+    font-family: 'Vidaloka', 'Times New Roman', serif !important;
+    text-align: center;
+  }
+  h2{
+    color: rgb(159, 108, 56);
+    font-family: 'Vidaloka', 'Times New Roman', serif !important;
+    text-align: center;
+    margin: 0px;
+  }
+  h2.last{
+    margin-bottom: 10vh;
+    line-height: 1;
+  }
+  a, p{
+    color: #f3f3f3;
+    text-align: center;
+    font-family: Solomon-Light;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2;
+    letter-spacing: 3px;
+  }
+  p{
+    padding: 0px 9vw 0px 9vw;
+  }
+  img{
+    max-width: 80vw;
+    max-height: auto;
+  }
+  .img-box::after{
+    content: '';
+    width: 0%;
+    height: 0%;
+  }
+  .img-box{
+    border: 2px solid rgb(159, 108, 56);
+    cursor: pointer;
+  }
+  .btn-style{
+    background: none;
+    border: 1px solid rgb(159, 108, 56);
+    padding: 10px 25px;
+    color: #f3f3f3;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  .btn-style:hover{
+    background: rgb(159, 108, 56);
+  }
+  .container-slider{
+    box-sizing: border-box;
+  }
+  .parafernalia-bottom-right{
+    max-height: 90px;
+    max-width: 25px;
+    bottom: 10px;
+    right: 15px;
+    position: fixed;
+  }
+
+  .section-content{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row-content{
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    #modal-form,
+    .parafernalia-next,
+    .parafernalia-back{
+      display: none !important;
+    }
+
+    .container-slider{
+      display: block !important;
+    }
+
+    .group-dispair-full > img{
+      max-width: 65vw;
+      height: auto;
+    }
+
+    .group-dispair-half > img {
+      max-height: 40vh;
+      width: auto;
+    }
+
+    .group > img {
+      max-width: 65vw;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    .container-slider{
+      display: flex !important;
+      transform: translateX(0px);
+      transition: transform 1s;
+      transition-timing-function: ease-out;
+    }
+
+    .row-content{
+      width: 100vw;
+    }
+    h1{
+      font-size: 8vw;
+    }
+    h2{
+      font-size: 5vw;
+    }
+    p{
+      font-size: 18px;
+    }
+    img{
+      max-width: 60vw;
+      flex-grow: 1;
+    }
+    .parafernalia-bottom-right{
+      display: none;
+    }
+    .parafernalia-next {
+      position: fixed;
+      width: 16vw;
+      max-width: 228px;
+      min-width: 120px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: 50% 50%;
+      cursor: pointer;
+
+      z-index: 100;
+    }
+    .parafernalia-back {
+      position: fixed;
+      display: none;
+      width: 16vw;
+      max-width: 228px;
+      min-width: 120px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: 50% 50%;
+      cursor: pointer;
+
+      z-index: 100;
+    }
+
+    .no-margin-top{
+      margin-top: 0px;
+    }
+    .pic-logo{
+      width: calc(40vw);
+      max-width: 620px;
+    }
+    .pic-logo-1{
+      width: calc(15vw);
+      max-width: 620px;
+    }
+    .wrap-groups{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .wrap-groups-dispair{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .group{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .group > img{
+      width: 35vw;
+    }
+
+    .wrap-groups-dispair img {
+      max-height: 480px;
+    }
+    .group-dispair-full > img{
+      max-width: 40vw;
+      height: auto;
+    }
+
+    .group-dispair-half > img {
+      max-height: 30vw;
+      width: auto;
+    }
+
+    #modal-form{
+      display: none;
+      position: absolute;
+      width: 100%;
+      justify-content: center;
+      z-index: 300;
+      transform: scale(0, 0);
+      opacity: 0;
+      background-color: transparent;
+      transition: all 1s ease-out;
+    }
+
+    #modal-form[data-showup=true]{
+      transform: scale(1, 1);
+      opacity: 1;
+      background-color: #000;
+    }
+
+  }
+
+</style>
+
+<%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-next', :id => 'btn-next' %>
+<%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-back', :id => 'btn-back' %>
+<%= image_tag "go-down.png", :class => 'parafernalia-bottom-right' %>
+<div id="modal-form" data-showup='false'>
+  <%= render partial: 'updatesform' %>
+</div>
+<div class="container-slider">
+  <div class="section-content">
+    <div class="row-content">
+      <h1>STOP IMAGINING</h1>
+    </div>
+  </div>
+	<div class="section-content">
+    <div class="row-content">
+      <%= image_tag "cs-logo.png" %>
+      <br>
+      <%= image_tag "cs-logo-text.png" %>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>THE COMPLEX</h2>
+      <img alt="section-content" id="logo-text" src="<%=asset_path 'CollectionSuites_Exterior_1.jpg' %>">
+      <p>38 SUITES / 4 BUILDINGS</p>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>THE COMPLEX</h2>
+  	  <%= image_tag "Collection_Suites_Small.png" %>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>THE SUITES</h2>
+      <div class="wrap-groups-dispair">
+        <div class="group-dispair-full">
+          <img src="<%=asset_path 'Collection_Suites_Suite_A.png' %>">
+          <p>SUITE 'A'</p>
+        </div>
+        <div class="group-dispair-half">
+          <img src="<%=asset_path 'Collection_Suites_Suite_B.png' %>">
+          <p>SUITE 'B'</p>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>THE SUITES</h2>
+      <div class="wrap-groups">
+        <div class="group">
+          <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-box' %>
+          <p>ART COLLECTOR SUITE</p>
+        </div>
+        <div class="group">
+          <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-box' %>
+          <p>CAR COLLECTOR SUITE</p>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>ART COLLECTOR SUITE</h2>
+      <div class="wrap-groups">
+        <div class="group">
+          <%= image_tag "CollectionSuites_the_suites_art.jpg" %>
+        </div>
+        <div class="group">
+          <%= image_tag "CollectionSuites_art_collector_suite_right.jpg" %>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>CAR COLLECTOR SUITE</h2>
+      <div class="wrap-groups">
+        <div class="group">
+          <%= image_tag "CollectionSuites_car_collector_suite_left.jpg" %>
+        </div>
+        <div class="group">
+          <%= image_tag "CollectionSuites_the_suites_cars.jpg" %>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>FEATURES</h2>
+      <p>
+        38 SUITES UNITS FROM 1,850 TO 2,25</br>
+        PLUS 250 sq.ft MEZZANINE</br>
+        COMPLETELY AUTOMATED UNITS</br>
+        FULL ENTERTAINMENT SYSTEM</br>
+        SECURITY PACKAGE</br>
+        GATED COMMUNITY WITH THE STAGE OF THE ART SECURITY 24/7</br>
+        CONCIERGE SERVICES</br>
+      </p>
+    </div>
+  </div>
+	<div class="section-content">
+    <div class="row-content">
+      <h2>BECOME A VIP MEMBER</h2>
+      <p class="no-margin-top" style="color:rgb(159, 108, 56);">
+        AND LIVE THE EXPERIENCE OF OWNING YOUR SPACE<br>
+        TO ENJOY YOUR MOST TREASURED COLLECTIONS
+      </p>
+      <button class='btn-style' type="button" name="button" id="btn-register-form">REGISTER</button>
+    </div>
+  </div>
+  <div class="section-content">
+    <div class="row-content">
+      <h2 class="last">THANKS FOR REGISTERING</h2>
+      <p>
+        YOUR INFORMATION HAS BEEN RECEIVED.</br>
+        WE WILL CONTACT YOU SHORTL. IF YOU HAVE ANY QUESTIONS PLEASE DIAL</br>
+        <a href="callto:+13058005893">+1 305.800.(5893)</a></br>
+      </p>
+    </div>
+  </div>
+</div>
 <div class="video">
   <span id="close-video-tag">X</span>
-  <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay controls poster="/assets/preload_image.png" width="100%" height='100%'></video>
+  <!-- <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>-->
+  <video id="tag-video" src="" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>
 </div>
 
-<div class="dummy-div-1"></div>
-<div id="index-main-div-atp">
-  <div id="index-title">
-    <h1>DISCOVER THE ONLY PRIVATE PLACE WORTHY OF YOUR MOST VALUED COLLECTION</h1>
-  </div>
-  <div id="index-subtitle">
-    <h2>WELCOME TO COLLECTION SUITES</h2>
-  </div>
-  <div id="index-text">
-    <p>Rising from the heart of Miami, Collection Suites will be 38 suites of
-    unprecedented luxury space. Arriving this summer, it will be an exclusive
-    private place for the most exquisite collections. Outfitted to reflect
-    your unique tastes, each suite offers a living space expressly designed
-    for you&#8212as an individual, as a lover of luxury, as a collector.</p>
-  </div>
-  <div id="index-gallery-icon">
-    <%= image_tag "gallery-icon.png", :id => 'gallery-icon-img'%>
-  </div>
-  <div class="index-middle-text" id="text-1">
-    <p>GALLERY</p>
-  </div>
-  <div class="index-middle-text" id="text-2">
-    <p>BE AMONGST THE FIRST TO KNOW OF PROJECT UPDATES AS THEY BECOME AVAILABLE</p>
-  </div>
-  <div id="yellow-ribbon"></div>
-  <div class="index-middle-text" id="text-3">
-    <p><a href="/updates_form">REGISTER</a></p>
-  </div>
-</div>
-
-<div class="wrapper-slide">
-  <div class="slide">
-    <div style="text-align:right; color:white;position:relative;top:20px;right:40px;"><span id="close" style="font-family: sans-serif;cursor:pointer;">X</span></div>
-    <ul class="list-slide" style="height: 80%; display:flex; flex-direction: column; justify-content: space-around; align-items:center;">
-      <li>
-        <%= image_tag "image1.png", :class =>'galery'%>
-      </li>
-      <li>
-        <%= image_tag "image2.png", :class =>'galery'%>
-      </li>
-      <li>
-        <%= image_tag "image3.png", :class =>'galery'%>
-      </li>
-      <li>
-        <%= image_tag "image4.png", :class =>'galery'%>
-      </li>
-      <li>
-        <%= image_tag "image5.png", :class =>'galery'%>
-      </li>
-    </ul>
-  </div>
-  <div class="image-space">
-    <img src="" id="current-img" class="hide">
-  </div>
-</div>
 <script type="text/javascript">
  (function() {
-  document.getElementById('gallery-icon-img').addEventListener('click', function(){
-    document.getElementsByClassName('image-space')[0].style.display = 'flex';
-    document.getElementsByClassName('wrapper-slide')[0].style.display = 'flex';
-    setTimeout(function(){
-      document.getElementsByClassName('wrapper-slide')[0].classList.add('up');
-    }, 0);
-  });
-
-    document.getElementById('text-1').addEventListener('click', function(){
-    document.getElementsByClassName('image-space')[0].style.display = 'flex';
-    document.getElementsByClassName('wrapper-slide')[0].style.display = 'flex';
-    setTimeout(function(){
-      document.getElementsByClassName('wrapper-slide')[0].classList.add('up');
-    }, 0);
-  });
-
-  document.getElementById('close').addEventListener('click', function(){
-    document.getElementsByClassName('wrapper-slide')[0].classList.remove('up');
-    document.getElementById('current-img').classList.add('hide');
-    setTimeout(function(){
-      document.getElementsByClassName('image-space')[0].style.display = 'none';
-    }, 0);
-    setTimeout(function(){
-      document.getElementsByClassName('wrapper-slide')[0].style.display = 'none';
-    }, 2000);
-  });
-
   document.getElementById('close-video-tag').addEventListener('click', function(){
     document.getElementById("tag-video").pause();
     document.getElementsByClassName('video')[0].classList.add('hide');
     var child = document.getElementsByClassName("video")[0];
     child.parentNode.removeChild(child);
+
+    document.getElementsByTagName('body')[0].style.overflowY = 'unset';
+
   });
 
-  for (var i = 0; i < 5; i++) {
-    document.getElementsByClassName('galery')[i].addEventListener('click', function(){
-      document.getElementById('current-img').classList.remove('hide');
-      document.getElementById('current-img').src = this.src;
-    });
-  }
- })();
-</script>
+  document.getElementById('btn-register-form').addEventListener('click', function(){
 
-<!-- <style media="screen">
-  body{
-    background: url('assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style> -->
+    document.getElementById('modal-form').style.display = 'flex';
+    setTimeout(function(){
+      document.getElementById('modal-form').dataset.showup = 'true';
+    },0);
+
+  });
+
+  document.getElementsByClassName('close')[0].addEventListener('click', function(){
+
+    document.getElementById('modal-form').dataset.showup = 'false';
+    setTimeout(function(){
+      document.getElementById('modal-form').style.display = 'none';
+    },1000);
+  });
+})();
+
+</script>
+<script type="text/javascript">
+  (function(){
+    var size_screen = -1*window.innerWidth;
+    var clickNumber = 0;
+    var init = true,
+        end = false;
+
+    document.getElementById('btn-next').addEventListener('click', function(){
+      clickNumber += 1;
+      size_ = size_screen*clickNumber;
+
+      // optimizar
+      if (clickNumber > 0) {
+        document.getElementById('btn-back').style.display = 'unset';
+      }
+      if (clickNumber > 8) {
+        document.getElementById('btn-next').style.display = 'none';
+      }
+      document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+      return false;
+    });
+    document.getElementById('btn-back').addEventListener('click', function(){
+      clickNumber -= 1;
+      size_ = size_screen*clickNumber;
+
+      // optimizar
+      if (clickNumber < 1) {
+        document.getElementById('btn-back').style.display = 'none';
+      }
+      if (clickNumber < 9) {
+        document.getElementById('btn-next').style.display = 'unset';
+      }
+
+      document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+      return false;
+    });
+
+    function debounce(func, wait, immediate) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+    var myEfficientFn = debounce(function() {
+
+      size_screen = (-1)*window.innerWidth;
+      size_ = size_screen*clickNumber;
+      document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+
+      if( (-1)*size_screen > 767){
+        //document.getElementsByClassName('container-slider')[0].style.display = 'flex';
+        document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
+      } else {
+        // version no optimizada
+        //document.getElementsByClassName('container-slider')[0].style.display = "unset";
+        document.getElementsByClassName('container-slider')[0].style.transform = "translateX(0px)";
+      }
+
+    }, 250);
+
+    window.addEventListener('resize', myEfficientFn);
+  })();
+</script>

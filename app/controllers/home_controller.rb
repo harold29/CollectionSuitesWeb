@@ -3,6 +3,10 @@ class HomeController < ApplicationController
   def index
     if logged_in?
       render 'index'
+      puts 'hola'
+      puts current_user
+      # @user = User.new
+      # @user = current_user
     else
       redirect_to root_url and return
     end
