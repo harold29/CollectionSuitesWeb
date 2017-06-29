@@ -261,6 +261,7 @@
       opacity: 0;
       background-color: transparent;
       transition: all 1s ease-out;
+      margin-top: 10vh;
     }
 
     #modal-form[data-showup=true]{
@@ -268,14 +269,56 @@
       opacity: 1;
       background-color: #000;
     }
-
   }
 
+  .modal{
+    display: none;
+  }
+
+  #modal-art,
+  #modal-car{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 101;
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+  }
+
+  .btn-back-gallery{
+    cursor: pointer;
+    transform-origin: center;
+    transform: rotate(90deg);
+    position: relative;
+    top: 10vh;
+    left: 0px;
+    max-width: 105px;
+    max-height: 53px;
+  }
+
+  .img-gallery:active{
+    transform: scale(2.5);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .img-gallery{
+    cursor: nesw-resize;
+  }
 </style>
 
 <%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-next', :id => 'btn-next' %>
 <%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-back', :id => 'btn-back' %>
-<%= image_tag "go-down.png", :class => 'parafernalia-bottom-right' %>
+<!-- <%= image_tag "go-down.png", :class => 'parafernalia-bottom-right' %> -->
 <div id="modal-form" data-showup='false'>
   <%= render partial: 'updatesform' %>
 </div>
@@ -325,38 +368,12 @@
       <h2>THE SUITES</h2>
       <div class="wrap-groups">
         <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-box' %>
+          <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-box', :id => 'art-img' %>
           <p>ART COLLECTOR SUITE</p>
         </div>
         <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-box' %>
+          <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-box', :id => 'car-img' %>
           <p>CAR COLLECTOR SUITE</p>
-        </div>
-      </div>
-    </div>
-	</div>
-	<div class="section-content">
-    <div class="row-content">
-      <h2>ART COLLECTOR SUITE</h2>
-      <div class="wrap-groups">
-        <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_art.jpg" %>
-        </div>
-        <div class="group">
-          <%= image_tag "CollectionSuites_art_collector_suite_right.jpg" %>
-        </div>
-      </div>
-    </div>
-	</div>
-	<div class="section-content">
-    <div class="row-content">
-      <h2>CAR COLLECTOR SUITE</h2>
-      <div class="wrap-groups">
-        <div class="group">
-          <%= image_tag "CollectionSuites_car_collector_suite_left.jpg" %>
-        </div>
-        <div class="group">
-          <%= image_tag "CollectionSuites_the_suites_cars.jpg" %>
         </div>
       </div>
     </div>
@@ -385,7 +402,39 @@
       <button class='btn-style' type="button" name="button" id="btn-register-form">REGISTER</button>
     </div>
   </div>
-  <div class="section-content">
+</div>
+
+<div id="modal-art" class="modal section-content">
+  <div class="row-content">
+    <h2>ART COLLECTOR SUITE</h2>
+    <div class="wrap-groups">
+      <div class="group">
+        <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-gallery' %>
+      </div>
+      <div class="group">
+        <%= image_tag "CollectionSuites_art_collector_suite_right.jpg", :class => 'img-gallery' %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "go-down.png", :class => 'btn-back-gallery' %>
+</div>
+
+<div id="modal-car" class="modal section-content">
+  <div class="row-content">
+    <h2>CAR COLLECTOR SUITE</h2>
+    <div class="wrap-groups">
+      <div class="group">
+        <%= image_tag "CollectionSuites_car_collector_suite_left.jpg", :class => 'img-gallery' %>
+      </div>
+      <div class="group">
+        <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-gallery' %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "go-down.png", :class => 'btn-back-gallery' %>
+</div>
+
+<div class="modal section-content">
     <div class="row-content">
       <h2 class="last">THANKS FOR REGISTERING</h2>
       <p>
@@ -395,13 +444,12 @@
       </p>
     </div>
   </div>
-</div>
+
 <div class="video">
   <span id="close-video-tag">X</span>
-  <!-- <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>-->
-  <video id="tag-video" src="" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>
+  <video id="tag-video" src="http://thesocialus.com/video1.mp4" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video>
+  <!-- <video id="tag-video" src="" autoplay poster="/assets/preload_image.png" width="100%" height='100%'></video> -->
 </div>
-
 <script type="text/javascript">
  (function() {
   document.getElementById('close-video-tag').addEventListener('click', function(){
@@ -431,7 +479,6 @@
     },1000);
   });
 })();
-
 </script>
 <script type="text/javascript">
   (function(){
@@ -439,6 +486,7 @@
     var clickNumber = 0;
     var init = true,
         end = false;
+    var slidesNum = document.querySelectorAll('.container-slider > div').length;
 
     document.getElementById('btn-next').addEventListener('click', function(){
       clickNumber += 1;
@@ -448,7 +496,7 @@
       if (clickNumber > 0) {
         document.getElementById('btn-back').style.display = 'unset';
       }
-      if (clickNumber > 8) {
+      if (clickNumber > (slidesNum - 2) ) {
         document.getElementById('btn-next').style.display = 'none';
       }
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
@@ -462,13 +510,37 @@
       if (clickNumber < 1) {
         document.getElementById('btn-back').style.display = 'none';
       }
-      if (clickNumber < 9) {
+      if (clickNumber < slidesNum) {
         document.getElementById('btn-next').style.display = 'unset';
       }
 
       document.getElementsByClassName('container-slider')[0].style.transform = "translateX("+size_+"px)";
       return false;
     });
+
+    document.getElementById('car-img').addEventListener('click', function(){
+      document.getElementById('modal-car').style.display = 'flex';
+      return false;
+    });
+
+    document.getElementById('art-img').addEventListener('click', function(){
+      document.getElementById('modal-art').style.display = 'flex';
+      return false;
+    });
+
+    document.getElementsByClassName('btn-back-gallery')[0].addEventListener('click', function(){
+      console.log('clicked!');
+      document.getElementById('modal-car').style.display = 'none';
+      document.getElementById('modal-art').style.display = 'none';
+      return false;
+    });
+
+    document.getElementsByClassName('btn-back-gallery')[1].addEventListener('click', function(){
+      console.log('clicked!');
+      document.getElementById('modal-car').style.display = 'none';
+      document.getElementById('modal-art').style.display = 'none';
+      return false;
+    })
 
     function debounce(func, wait, immediate) {
       var timeout;
