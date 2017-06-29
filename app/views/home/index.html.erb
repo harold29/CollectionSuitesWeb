@@ -36,6 +36,7 @@
        min-width: 40%;
        box-shadow: unset;
      }
+
 </style>
 
 <style>
@@ -116,12 +117,26 @@
   .section-content{
     height: 100vh;
     width: 100vw;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .row-content{
     width: 100%;
+  }
+  .close-image{
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 60px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 151;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-family: sans-serif;
   }
 
   @media (max-width: 767px) {
@@ -153,6 +168,7 @@
 
   @media (min-width: 768px) {
     .container-slider{
+      display: -webkit-flex !important;
       display: flex !important;
       transform: translateX(0px);
       transition: transform 1s;
@@ -173,6 +189,7 @@
     }
     img{
       max-width: 60vw;
+      -webkit-flex-grow: 1;
       flex-grow: 1;
     }
     .parafernalia-bottom-right{
@@ -218,19 +235,30 @@
       max-width: 620px;
     }
     .wrap-groups{
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+
       display: flex;
-      flex-direction: row;
       justify-content: center;
     }
     .wrap-groups-dispair{
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+      -webkit-justify-content: center;
+
       display: flex;
       flex-direction: row;
       justify-content: center;
     }
     .group{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      -webkit-align-items: center;
+
       display: flex;
       flex-direction: column;
       align-items: center;
+
       margin-left: 5px;
       margin-right: 5px;
     }
@@ -288,9 +316,22 @@
     z-index: 101;
     display: none;
 
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-align-items: flex-start;
+
     flex-direction: column;
     align-items: center;
     align-items: flex-start;
+
+    transform: translateY(100%);
+    transition: transform 0.8s ease-out;
+  }
+
+  #modal-art.open,
+  #modal-car.open{
+    transform: translateY(0%);
+    transition: transform 0.8s ease-out;
   }
 
   .btn-back-gallery{
@@ -304,15 +345,20 @@
     max-height: 53px;
   }
 
-  .img-gallery:active{
+  .img-gallery[data-status=active]{
     transform: scale(2.5);
     position: absolute;
     margin: auto;
     left: 0;
     right: 0;
+    transition: all 1s ease-out;
+    z-index: 103;
   }
   .img-gallery{
+    transform: scale(1);
+    transition: all 0.8s ease-out;
     cursor: nesw-resize;
+    z-index: 102;
   }
 </style>
 
@@ -409,10 +455,12 @@
     <h2>ART COLLECTOR SUITE</h2>
     <div class="wrap-groups">
       <div class="group">
-        <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-gallery' %>
+        <span class="close-image" data-rel='1'>X</span>
+        <%= image_tag "CollectionSuites_the_suites_art.jpg", :class => 'img-gallery', :data => {:status => 'inactive', :rela => '1'}  %>
       </div>
       <div class="group">
-        <%= image_tag "CollectionSuites_art_collector_suite_right.jpg", :class => 'img-gallery' %>
+        <span class="close-image" data-rel='2'>X</span>
+        <%= image_tag "CollectionSuites_art_collector_suite_right.jpg", :class => 'img-gallery', :data => {:status => 'inactive', :rela => '2'}  %>
       </div>
     </div>
   </div>
@@ -424,10 +472,12 @@
     <h2>CAR COLLECTOR SUITE</h2>
     <div class="wrap-groups">
       <div class="group">
-        <%= image_tag "CollectionSuites_car_collector_suite_left.jpg", :class => 'img-gallery' %>
+        <span class="close-image" data-rel='3'>X</span>
+        <%= image_tag "CollectionSuites_car_collector_suite_left.jpg", :class => 'img-gallery', :data => {:status => 'inactive', :rela => '3'}  %>
       </div>
       <div class="group">
-        <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-gallery' %>
+        <span class="close-image" data-rel='4'>X</span>
+        <%= image_tag "CollectionSuites_the_suites_cars.jpg", :class => 'img-gallery', :data => {:status => 'inactive', :rela => '4'}  %>
       </div>
     </div>
   </div>
@@ -488,6 +538,8 @@
         end = false;
     var slidesNum = document.querySelectorAll('.container-slider > div').length;
 
+    var arrayImgs = [0, 2,1,4,3];
+
     document.getElementById('btn-next').addEventListener('click', function(){
       clickNumber += 1;
       size_ = size_screen*clickNumber;
@@ -520,25 +572,35 @@
 
     document.getElementById('car-img').addEventListener('click', function(){
       document.getElementById('modal-car').style.display = 'flex';
+      setTimeout(function(){
+        document.getElementById('modal-car').classList.add('open');
+      },0.8);
       return false;
     });
 
     document.getElementById('art-img').addEventListener('click', function(){
       document.getElementById('modal-art').style.display = 'flex';
+      setTimeout(function(){
+        document.getElementById('modal-art').classList.add('open');
+      },0.8);
       return false;
     });
 
     document.getElementsByClassName('btn-back-gallery')[0].addEventListener('click', function(){
-      console.log('clicked!');
-      document.getElementById('modal-car').style.display = 'none';
-      document.getElementById('modal-art').style.display = 'none';
+      document.getElementById('modal-art').classList.remove('open');
+      setTimeout(function(){
+        document.getElementById('modal-car').style.display = 'none';
+        document.getElementById('modal-art').style.display = 'none';
+      },800);
       return false;
     });
 
     document.getElementsByClassName('btn-back-gallery')[1].addEventListener('click', function(){
-      console.log('clicked!');
-      document.getElementById('modal-car').style.display = 'none';
-      document.getElementById('modal-art').style.display = 'none';
+      document.getElementById('modal-car').classList.remove('open');
+      setTimeout(function(){
+        document.getElementById('modal-car').style.display = 'none';
+        document.getElementById('modal-art').style.display = 'none';
+      },800);
       return false;
     })
 
@@ -573,6 +635,36 @@
       }
 
     }, 250);
+
+    for (var i = 0; i < document.getElementsByClassName('img-gallery').length; i++) {
+      document.getElementsByClassName('img-gallery')[i].addEventListener('click', function(){
+        if (this.dataset.status == 'inactive') {
+
+          this.dataset.status = 'active';
+          var asociate = this.dataset.rela;
+          document.querySelector('span[data-rel="'+asociate+'"]').style.display = 'unset';
+
+          if (window.innerWidth <= 767) {
+            document.querySelector('.img-gallery[data-rela="'+arrayImgs[asociate]+'"]').style.display = 'none';
+          }
+
+        }else{
+          this.dataset.status = 'inactive';
+        }
+        return false;
+      });
+    }
+
+    for (var i = 0; i < document.getElementsByClassName('close-image').length; i++) {
+      document.getElementsByClassName('close-image')[i].addEventListener('click', function(){
+        var asociate = this.dataset.rel;
+        document.querySelector('.img-gallery[data-rela="'+asociate+'"]').dataset.status = 'inactive';
+        if (window.innerWidth <= 767) {
+          document.querySelector('.img-gallery[data-rela="'+arrayImgs[asociate]+'"]').style.display = 'unset';
+        }
+        this.style.display = 'none';
+      });
+    }
 
     window.addEventListener('resize', myEfficientFn);
   })();
