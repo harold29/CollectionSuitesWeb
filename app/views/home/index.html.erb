@@ -41,6 +41,9 @@
        min-width: 40%;
        box-shadow: unset;
      }
+     .pirate{
+       position: relative;
+     }
 
 </style>
 
@@ -154,10 +157,18 @@
   }
 
   @media (max-width: 767px) {
-    #modal-form,
     .parafernalia-next,
     .parafernalia-back{
       display: none !important;
+    }
+
+    #modal-form{
+      display: none;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      bottom: 0;
     }
 
     .container-slider{
@@ -177,7 +188,6 @@
     .group > img {
       max-width: 65vw;
     }
-
   }
 
   @media (min-width: 768px) {
@@ -379,9 +389,7 @@
 <%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-next', :id => 'btn-next' %>
 <%= image_tag "next-arrow-piece-one.svg", :class => 'parafernalia-back', :id => 'btn-back' %>
 <!-- <%= image_tag "go-down.png", :class => 'parafernalia-bottom-right' %> -->
-<div id="modal-form" data-showup='false'>
-  <%= render partial: 'updatesform' %>
-</div>
+
 <div class="container-slider">
   <div class="section-content">
     <div class="row-content">
@@ -452,7 +460,7 @@
       </p>
     </div>
   </div>
-	<div class="section-content">
+	<div class="section-content pirate">
     <div class="row-content">
       <h2>BECOME A VIP MEMBER</h2>
       <p class="no-margin-top" style="color:rgb(159, 108, 56);">
@@ -460,6 +468,9 @@
         TO ENJOY YOUR MOST TREASURED COLLECTIONS
       </p>
       <button class='btn-style' type="button" name="button" id="btn-register-form">REGISTER</button>
+    </div>
+    <div id="modal-form" data-showup='false'>
+      <%= render partial: 'updatesform' %>
     </div>
   </div>
 </div>
@@ -497,17 +508,6 @@
   </div>
   <%= image_tag "go-down.png", :class => 'btn-back-gallery' %>
 </div>
-
-<div class="modal section-content">
-    <div class="row-content">
-      <h2 class="last">THANKS FOR REGISTERING</h2>
-      <p>
-        YOUR INFORMATION HAS BEEN RECEIVED.</br>
-        WE WILL CONTACT YOU SHORTL. IF YOU HAVE ANY QUESTIONS PLEASE DIAL</br>
-        <a href="callto:+13058005893">+1 305.800.(5893)</a></br>
-      </p>
-    </div>
-  </div>
 
 <div class="video">
   <span id="close-video-tag">X</span>
