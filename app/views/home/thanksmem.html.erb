@@ -1,129 +1,336 @@
-<style media="screen">
-  body{
-/*     background: url('assets/background-bottles.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    /* particular de esta pagina*/
-    -webkit-justify-content: flex-start;
-    -webkit-align-items: flex-start;
-
-    justify-content: flex-start;
-    align-items: flex-start;
+<style>
+  html,body{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
   }
 
-  .btn-enter{
-    background: rgb(159, 108, 56);
-    background: -moz-radial-gradient(center, ellipse cover, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
-    background: radial-gradient(ellipse at center, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 0%, rgb(159, 108, 56) 75%, rgba(145,140,42,1) 75%, rgba(145,140,42,1) 100%);
-    border: none;
-    color: black;
-    padding: 0.5% 1%;
+  body {
+    display: unset;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  h1{
+    color: rgb(159, 108, 56);
+    font-family: 'Vidaloka', 'Times New Roman', serif !important;
+    text-align: center;
+  }
+  h2{
+    color: rgb(159, 108, 56);
+    font-family: 'Vidaloka', 'Times New Roman', serif !important;
+    text-align: center;
+    margin: 0px;
+  }
+  h2.last{
+    margin-bottom: 10vh;
+    line-height: 1;
+  }
+  .section-content .row-content h2{
+    margin-top: -2.5%;
+    padding-bottom: 2.5%;
+  }
+
+  a, p{
+    color: #f3f3f3;
+    text-align: center;
+    font-family: Solomon-Light;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2;
+    letter-spacing: 3px;
+  }
+  p{
+    padding: 0px 9vw 0px 9vw;
+  }
+  img{
+    max-width: 80vw;
+    max-height: auto;
+  }
+  .img-box::after{
+    content: '';
+    width: 0%;
+    height: 0%;
+  }
+  .img-box{
+    border: 2px solid rgb(159, 108, 56);
     cursor: pointer;
   }
-
-  .btn-enter:hover {
-    font-weight: bold;
+  .btn-style{
+    background: none;
+    border: 1px solid rgb(159, 108, 56);
+    padding: 10px 25px;
+    color: #f3f3f3;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  .btn-style:hover{
+    background: rgb(159, 108, 56);
   }
 
-  .line-body > p{
-    color: white;
-    text-align: left;
+  input[type="submit"]:focus {
+    outline-color: transparent;
+  }
+  .container-slider{
+    box-sizing: border-box;
+  }
+  .parafernalia-bottom-right{
+    max-height: 90px;
+    max-width: 25px;
+    bottom: 10px;
+    right: 15px;
+    position: fixed;
   }
 
-  .line-body > h1,
-  .line-body > p > span{
-    color: rgb(159, 108, 56);
-    text-align: left;
+  .section-content{
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row-content{
+    width: 100%;
+  }
+  .close-image{
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 60px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 151;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-family: sans-serif;
   }
 
-  .line-body > h1{
-    font-size: 3em;
-  }
-
-  .line-body > p{
-    font-size: 1.5em;
-  }
-
-  @media (min-width: 934px) {
-    .thanks-box{
-      margin-left: 50%;
-      margin-top: 5%;
+  @media (max-width: 767px) {
+    .container-slider{
+      display: block !important;
     }
 
-    .wrap-logo{
-      text-align: left;
-      position: relative;
-      right: 150px;
+    .group-dispair-full > img{
+      max-width: 65vw;
+      height: auto;
     }
 
-    .line-body{
-      width: 50%;
+    .group-dispair-half > img {
+      max-height: 40vh;
+      width: auto;
     }
 
-    .line-footer{
-      text-align: left;
+    .group > img {
+      max-width: 65vw;
     }
+
   }
-  @media (max-width: 933px) {
-    .thanks-box{
-      margin-right: 0px;
+
+  @media (min-width: 768px) {
+    .container-slider{
+      display: -webkit-flex !important;
+      display: flex !important;
+      transform: translateX(0px);
+      transition: transform 1s;
+      transition-timing-function: ease-out;
+    }
+
+    .row-content{
+      width: 100vw;
+    }
+    h1{
+      font-size: 8vw;
+    }
+    h2{
+      font-size: 5vw;
+    }
+    p{
+      font-size: 18px;
+    }
+    img{
+      max-width: 60vw;
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+    }
+    .parafernalia-bottom-right{
+      display: none;
+    }
+    .parafernalia-next {
+      position: fixed;
+      width: 16vw;
+      max-width: 228px;
+      min-width: 120px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: 50% 50%;
+      cursor: pointer;
+
+      z-index: 100;
+    }
+    .parafernalia-back {
+      position: fixed;
+      display: none;
+      width: 16vw;
+      max-width: 228px;
+      min-width: 120px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: 50% 50%;
+      cursor: pointer;
+
+      z-index: 100;
+    }
+
+    .no-margin-top{
+      margin-top: 0px;
+    }
+    .pic-logo{
+      width: calc(40vw);
+      max-width: 620px;
+    }
+    .pic-logo-1{
+      width: calc(15vw);
+      max-width: 620px;
+    }
+    .wrap-groups{
       display: -webkit-flex;
-      -webkit-justify-content: space-around;
-      -webkit-align-items: center;
-      -webkit-flex-direction: column;
+      -webkit-flex-direction: row;
 
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: center;
+    }
+    .wrap-groups-dispair{
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+      -webkit-justify-content: center;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .group{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      -webkit-align-items: center;
+
+      display: flex;
       flex-direction: column;
+      align-items: center;
 
-      height: 100%;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .group > img{
+      width: 35vw;
     }
 
-    .line-logo {
-      height: unset;
+    .wrap-groups-dispair img {
+      max-height: 480px;
+    }
+    .group-dispair-full > img{
+      max-width: 40vw;
+      height: auto;
+    }
+
+    .group-dispair-half > img {
+      max-height: 30vw;
+      width: auto;
+    }
+
+    #modal-form{
+      display: none;
+      position: absolute;
       width: 100%;
+      justify-content: center;
+      z-index: 300;
+      transform: scale(0, 0);
+      opacity: 0;
+      background-color: transparent;
+      transition: all 1s ease-out;
+      margin-top: 10vh;
     }
 
-    #logo{
-      width: 60px;
+    #modal-form[data-showup=true]{
+      transform: scale(1, 1);
+      opacity: 1;
+      background-color: #000;
     }
-
-    #logo-text{
-      width: 160px;
-    }
-
-    .line-body > h1 {
-      font-size: 2em;
-    }
-
-    .line-body > p {
-      margin-left: 2em;
-      font-size: 1.3em;
-    }
-
   }
 
+  .modal{
+    display: none;
+  }
+
+  #modal-art,
+  #modal-car{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 101;
+    display: none;
+
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-align-items: flex-start;
+
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+
+    transform: translateY(100%);
+    transition: transform 0.8s ease-out;
+  }
+
+  #modal-art.open,
+  #modal-car.open{
+    transform: translateY(0%);
+    transition: transform 0.8s ease-out;
+  }
+
+  .btn-back-gallery{
+    cursor: pointer;
+    transform-origin: center;
+    transform: rotate(90deg);
+    position: relative;
+    top: 10vh;
+    left: 0px;
+    max-width: 105px;
+    max-height: 53px;
+  }
+
+  .img-gallery[data-status=active]{
+    transform: scale(2.5);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transition: all 1s ease-out;
+    z-index: 103;
+  }
+  .img-gallery{
+    transform: scale(1);
+    transition: all 0.8s ease-out;
+    cursor: nesw-resize;
+    z-index: 102;
+  }
 </style>
 
-<div class="dummy-div-2"></div>
-<div class="thanks-box">
-  <div class="line-logo">
-    <div class="wrap-logo">
-      <%= image_tag "cs-logo.png", :id => 'logo'%>
-      <%= image_tag "cs-logo-text.png", :id => 'logo-text'%>
+<div class="section-content">
+    <div class="row-content">
+      <h2 class="last">THANKS FOR REGISTERING</h2>
+      <p>
+        YOUR INFORMATION HAS BEEN RECEIVED.</br>
+        WE WILL CONTACT YOU SHORTL. IF YOU HAVE ANY QUESTIONS PLEASE DIAL</br>
+        <a href="callto:+13058005893">+1 305.800.(5893)</a></br>
+      </p>
     </div>
   </div>
-  <div class="line-body">
-    <h1>THANK YOU FOR REGISTERING</h1>
-    <p>To receive the lastest news and updates on Collection Suites Miami's most anticipated private home for the most valuable collections.</p>
-    <p>We look forward to announcing the opening of our sales center this summer and to keeping you informed as this unprecedented experience unfolds.</p>
-  </div>
-  <div class="line-footer">
-    <button type="button" name="button" class="btn-enter" onclick="location.href='mailto:contact@collection-suites.com';">CONTACT US</button>
-  </div>
-</div>
